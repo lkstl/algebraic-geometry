@@ -1,0 +1,6 @@
+[submodule "latex-macros"]
+	path = latex-macros
+	url = git@git.sr.ht:~lkstl/latex-macros
+[submodule "latex-uebungsblatt"]
+	path = latex-uebungsblatt
+	url = git@git.sr.ht:~lkstl/latex-uebungsblatt
