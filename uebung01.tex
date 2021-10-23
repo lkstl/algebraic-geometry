@@ -1,0 +1,101 @@
+\documentclass{latex-uebungsblatt/uebungsblatt}
+\usepackage{customtitle}
+
+\begin{document}
+\maketitle{1}
+
+  Eine \emph{teilweise geordnete Menge} ist eine Menge $A$ zusammen mit einer reflexiven, transitiven und antisymmetrischen Relation $≤$.
+  Eine Abbildung $f:A → B$ zwischen teilweise geordneten Mengen heißt \emph{ordnungserhaltend} falls $a ≤_A a'$ impliziert, dass $f(a) ≤_B f(a')$.
+
+\begin{exercise}[Hüllenoperatoren]
+  Ein \emph{Hüllenoperator} auf einer teilweise geordneten Menge $A$ ist eine ordnungserhaltende Abbildung $◯:A → A$, welche \emph{idempotent} und \emph{extensiv} ist.
+  Das heißt $◯(◯(a))=◯(a)$ und $a ≤ ◯(a)$ für alle $a ∈ A$.
+  \begin{enumerate}
+    \item Sei $R$ ein kommutativer Ring und $(\_):𝒫(R) → 𝒫(R)$ die Abbildung auf der Potenzmenge von $R$, die einer Teilmenge $S⊆R$ das von ihr erzeugte Ideal $(S)⊆R$ zuordnet.
+      Zeige, dass $(\_)$ ein Hüllenoperator ist, wobei $𝒫(R)$ bezüglich der Teilmengenrelation $⊆$ geordnet ist.
+    \item Sei $R$ ein kommutativer Ring und $\sqrt{-}:\mathrm{Idl}(R) → \mathrm{Idl}(R)$ die Abbildung auf der Menge der Ideale von $R$, welche einem Ideal $I$ sein Radikalideal $\sqrt{I}$ zuordnet.
+      Zeige, dass $\sqrt{-}$ ein Hüllenoperator ist, wobei $\mathrm{Idl}(R)$ bezüglich der Teilmengenrelation $⊆$ geordnet ist.
+  \end{enumerate}
+\end{exercise}
+
+\begin{exercise}[Galoisverbindungen]
+  Eine \emph{Galoisverbindung} zwischen zwei teilweise geordneten Mengen ist ein Paar ordnungserhaltender Abbildungen $g:(B,≤_B) ⇆ (A,≤_A):f$, welches folgende \emph{Adjunktionseigenschaft} für alle $a ∈ A$, $b ∈ B$ erfüllt:
+      $$
+      f(a) ≤_B b ⇔ a ≤_A g(b)
+      $$
+  \begin{enumerate}
+    \item Zeige, dass jeder Hüllenoperator $◯:A → A$ eine Galoisverbindung zwischen seinem Bild und $A$ selbst induziert.
+      \begin{equation*}
+        \begin{tikzcd}
+          ◯(A)
+            \arrow[r,yshift=-2.5,hookrightarrow,"\text{\tiny Inklusion}"']
+          & A
+            \arrow[l,yshift=2.5,"◯"']
+        \end{tikzcd}
+      \end{equation*}
+      Folgere die Existenz von Galoisverbindungen zwischen Potenzmenge, Menge von Idealen und Menge von Radikalidealen eines kommutativen Ringes $R$:
+      \begin{equation*}
+        \begin{tikzcd}
+          (\mathrm{Idl}(R),⊆)
+            \arrow[r,yshift=-2.5,hookrightarrow]
+          & (𝒫(R),⊆)
+            \arrow[l,yshift=2.5,"(\_)"']
+        \end{tikzcd}
+        ,\qquad
+        \begin{tikzcd}
+          (\mathrm{Rad}(R),⊆)
+            \arrow[r,yshift=-2.5,hookrightarrow]
+          & (\mathrm{Idl}(R),⊆)
+            \arrow[l,yshift=2.5,"\sqrt{-}"']
+        \end{tikzcd}.
+      \end{equation*}
+    \item Seien $X$, $Y$ Mengen und $R ⊆ X × Y$ eine Relation von $X$ nach $Y$.
+      Zeige, dass die folgenden Abbildungen eine Galoisverbindung zwischen den Potenzmengen von $X$ und $Y$ bilden.
+      \begin{align*}
+        𝒱_R : (𝒫(X),⊇) &\leftrightarrows (𝒫(Y),⊆) : ℐ_R\\
+        S & \longmapsto \{y ∈ Y \mid ∀s ∈ S:sRy\}\\
+        \{x ∈ X \mid ∀t ∈ T:xRt\} & \longmapsfrom T
+      \end{align*}
+      {\scriptsize Beachte, dass hier $≤_B$ die Teilmengenrelation $⊆$ und $≤_A$ die umgekehrte Teilmengenrelation $⊇$ ist.}\\
+      Folgere die Existenz einer Galoisverbindung zwischen den Potenzmengen des Polynomrings $K[x_1,\dots,x_n]$ und des affinen Raums $𝔸^n_K$ über einem Körper $K$.
+      \begin{equation*}
+        \begin{tikzcd}
+          (𝒫(K[x_1,\dots,x_n]),⊇)
+            \arrow[r,yshift=-2.5,"𝒱"']
+          & (𝒫(𝔸^n_K),⊆)
+            \arrow[l,yshift=2.5,"ℐ"']
+        \end{tikzcd}
+      \end{equation*}
+    \item Seien
+      $
+        i:C ⇆ B:h$ und $g:B ⇆ A:f
+        $
+        Galoisverbindungen.
+      Zeige, dass
+      $
+        g∘i:C ⇆ A:h∘f
+        $
+        eine Galoisverbindung bildet.
+    \item Sei $g:B⇆A:f$ eine Galoisverbindung.
+      Zeige, dass $g∘f∘g=g$ und $f∘g∘f=f$.
+      Folgere, dass jede Galoisverbindung einen Hüllenoperator $f∘g:B → B$ auf $B$ und einen Hüllenoperator $g∘f:A → A$ auf $A$ induziert.
+  \end{enumerate}
+\end{exercise}
+
+  
+  Ist $S⊆A$ eine Teilmenge, so nennen wir ein Element $a ∈ A$ eine \emph{untere (bzw.~obere) Schranke} von $S$, falls $a ≤ s$ (bzw.~$s ≤ a$) für alle $s ∈ S$.
+    Eine untere (obere) Schranke, die in $S$ enthalten ist, heißt \emph{Minimum (Maximum)} von $S$.
+  \begin{enumerate}
+    \item Zeige, dass Minima und Maxima einer Teilmenge eindeutig sind, falls sie existieren.
+  \end{enumerate}
+  Das Minimum (Maximum) $s$ der Menge aller oberen (unteren) Schranken von $S$, sofern existent, heißt \emph{Supremum (Infimum)} von $S$.
+  Wir schreiben dann $s=\sup(S)$ (bzw.~$s=\inf(S)$).
+  \begin{enumerate}[start=2]
+    \item Sei $f:A ↔ B:g$ eine Galoisverbindung.
+      \begin{enumerate}
+        \item Zeige, dass $f$ Suprema erhält, das heißt $f(\sup S)=\sup f(S)$ für $S⊆A$.
+        \item Folgere, dass $g$ Infima erhält, das heißt $g(\inf T)=\inf g(T)$ für $T⊆B$.
+      \end{enumerate}
+  \end{enumerate}
+
+\end{document}
