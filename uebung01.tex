@@ -1,101 +1,139 @@
 \documentclass{latex-uebungsblatt/uebungsblatt}
 \usepackage{customtitle}
 
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\Idl}{Idl}
+\DeclareMathOperator{\Rad}{Rad}
+\DeclareMathOperator{\Fix}{Fix}
+
 \begin{document}
 \maketitle{1}
 
-  Eine \emph{teilweise geordnete Menge} ist eine Menge $A$ zusammen mit einer reflexiven, transitiven und antisymmetrischen Relation $≤$.
-  Eine Abbildung $f:A → B$ zwischen teilweise geordneten Mengen heißt \emph{ordnungserhaltend} falls $a ≤_A a'$ impliziert, dass $f(a) ≤_B f(a')$.
+Eine \emph{teilweise geordnete Menge} ist eine Menge $A$ zusammen mit einer reflexiven, transitiven und antisymmetrischen Relation $≤$.
+Eine Abbildung $f:A → B$ zwischen teilweise geordneten Mengen heißt \emph{ordnungserhaltend} falls $a ≤_A a'$ impliziert, dass $f(a) ≤_B f(a')$.
+
+\begin{exercise}[Galoisverbindungen]
+  Eine \emph{Galoisverbindung} zwischen zwei teilweise geordneten Mengen ist ein Paar ordnungserhaltender Abbildungen $g:(B,≤_B) ⇆ (A,≤_A):f$, welches folgende \emph{Adjunktionseigenschaft} für alle $a ∈ A$, $b ∈ B$ erfüllt:
+  $$
+  f(a) ≤_B b ⇔ a ≤_A g(b)
+  $$
+  \begin{enumerate}
+    \item Seien $X$, $Y$ Mengen und $⊥ ⊆ X × Y$ eine Relation von $X$ nach $Y$.
+      Zeige, dass die folgenden Abbildungen eine Galoisverbindung zwischen den Potenzmengen von $X$ und $Y$ bilden.
+      \begin{align*}
+        𝒱_R : (𝒫(X),⊇) &\leftrightarrows (𝒫(Y),⊆) : ℐ_R\\
+        S & \longmapsto \{y ∈ Y \mid ∀s ∈ S:s \perp y\}\\
+        \{x ∈ X \mid ∀t ∈ T:x \perp t\} & \longmapsfrom T
+      \end{align*}
+      {\scriptsize Beachte, dass hier $≤_A$ die Teilmengenrelation $⊆$ und $≤_B$ die umgekehrte Teilmengenrelation $⊇$ ist!
+      Eine ordungserhaltende Abbildung würde man hier also eher inklusions\emph{umkehrend} nennen.}
+    \item Sei $K$ ein Körper.
+      Folgere die Existenz einer Galoisverbindung
+      $$
+      𝒱:(𝒫(K[x_1,\dots,x_n]),⊇) ⇆ (𝒫(𝔸^n_K),⊆):ℐ
+      $$
+      zwischen den Potenzmengen des Polynomrings $K[x_1,\dots,x_n]$ und des affinen Raums $𝔸^n_K$, sodass $𝒱(S)$ die Verschwindungsmenge von $S⊆K[x_1,\dots,x_n]$ und $ℐ(T)$ das Verschwindungsideal von $T⊆𝔸^n_K$ ist.
+    \item Bezeichne $\Idl(R)$ die Menge der Ideale eines kommutativen Rings $R$.
+      Zeige, dass $ℐ(T)$ für jedes $T⊆𝔸^n_K$ ein Ideal ist und folgere, dass obige Galoisverbindung zu einer Galoisverbindung $𝒱:(\Idl(K[x_1,\dots,x_n]),⊇) ⇆ (𝒫(𝔸^n_K),⊆):ℐ$ absteigt.
+    \item Bezeichne $\Rad(R)$ die Menge der radikalen Ideale eines kommutativen Rings $R$.
+    Zeige, dass $ℐ(T)$ für jedes $T⊆𝔸^n_K$ radikal ist und folgere, dass obige Galoisverbindung zu einer Galoisverbindung $𝒱:(\Rad(K[x_1,\dots,x_n]),⊇) ⇆ (𝒫(𝔸^n_K),⊆):ℐ$ absteigt.\\
+      {\scriptsize Ein Ideal $I⊆R$ heißt \emph{radikal}, falls für jedes $f ∈ R$ die Existenz eines $n ∈ ℕ$ mit $f^n ∈ I$ schon $f ∈ I$ impliziert.}
+    %\item Finde eine Galoisverbindung zwischen den Zwischenkörpern $E$ einer Galoiserweiterung $L/K$ und den Untergruppen der Galoisgruppe $\mathrm{Gal}(L/K)$.
+  \end{enumerate}
+\end{exercise}
 
 \begin{exercise}[Hüllenoperatoren]
   Ein \emph{Hüllenoperator} auf einer teilweise geordneten Menge $A$ ist eine ordnungserhaltende Abbildung $◯:A → A$, welche \emph{idempotent} und \emph{extensiv} ist.
   Das heißt $◯(◯(a))=◯(a)$ und $a ≤ ◯(a)$ für alle $a ∈ A$.
+
+  Sei im Folgenden $R$ ein kommutativer Ring und $K$ ein Körper.
   \begin{enumerate}
-    \item Sei $R$ ein kommutativer Ring und $(\_):𝒫(R) → 𝒫(R)$ die Abbildung auf der Potenzmenge von $R$, die einer Teilmenge $S⊆R$ das von ihr erzeugte Ideal $(S)⊆R$ zuordnet.
-      Zeige, dass $(\_)$ ein Hüllenoperator ist, wobei $𝒫(R)$ bezüglich der Teilmengenrelation $⊆$ geordnet ist.
-    \item Sei $R$ ein kommutativer Ring und $\sqrt{-}:\mathrm{Idl}(R) → \mathrm{Idl}(R)$ die Abbildung auf der Menge der Ideale von $R$, welche einem Ideal $I$ sein Radikalideal $\sqrt{I}$ zuordnet.
-      Zeige, dass $\sqrt{-}$ ein Hüllenoperator ist, wobei $\mathrm{Idl}(R)$ bezüglich der Teilmengenrelation $⊆$ geordnet ist.
+    \item Zeige, dass die Abbildung $(\_):𝒫(R) → 𝒫(R)$, welche einer Teilmenge $S⊆R$ das von ihr erzeugte Ideal $(S)\coloneqq \{r_1s_1 + \dots + r_ns_n \mid n ∈ ℕ,\, r_i ∈ R,\, s_i ∈ S\}$ zuordnet, ein Hüllenoperator auf $(𝒫(R),⊆)$ ist.
+    \item Zeige, dass $𝒱((S))=𝒱(S)$ für jede Teilmenge $S⊆K[x_1,\dots,x_n]$.
+    \item Zeige, dass die Abbildung $\sqrt{-}:\Idl(R) → \Idl(R)$, welche einem Ideal $I$ sein Radikal $\sqrt{I}\coloneqq\{r ∈ R \mid ∃n ∈ ℕ : r^n ∈ I\}$ zuordnet, ein Hüllenoperator auf $(\Idl(R),⊆)$ ist.
+    \item Zeige, dass $𝒱(\sqrt{I})=𝒱(I)$ für jedes Ideal $I⊆K[x_1,\dots,x_n]$.
   \end{enumerate}
 \end{exercise}
 
-\begin{exercise}[Galoisverbindungen]
-  Eine \emph{Galoisverbindung} zwischen zwei teilweise geordneten Mengen ist ein Paar ordnungserhaltender Abbildungen $g:(B,≤_B) ⇆ (A,≤_A):f$, welches folgende \emph{Adjunktionseigenschaft} für alle $a ∈ A$, $b ∈ B$ erfüllt:
-      $$
-      f(a) ≤_B b ⇔ a ≤_A g(b)
-      $$
+\begin{exercise}[Galoiskorrespondenzen]
+
+  Sei $g:B ⇆ A:f$ eine Galoisverbindung.
   \begin{enumerate}
-    \item Zeige, dass jeder Hüllenoperator $◯:A → A$ eine Galoisverbindung zwischen seinem Bild und $A$ selbst induziert.
+    \item Zeige, dass $g∘f$ ein Hüllenoperator auf $(A,≤_A)$ ist.
+    \item Zeige, dass $f∘g$ ein Hüllenoperator auf $(B,≥_B)$ ist. {\scriptsize Beachte die umgekehrte Ordnung.}
+    \item Eine Galoisverbindung deren Abbildungen zueinander invers sind, heißt \emph{Galoiskorrespondenz}.
+      Zeige, dass die gegebene Galoisverbindung eine Galoiskorrespondenz zwischen den Fixpunktmengen ihrer assoziierten Hüllenoperatoren induziert.\\
       \begin{equation*}
         \begin{tikzcd}
-          ◯(A)
-            \arrow[r,yshift=-2.5,hookrightarrow,"\text{\tiny Inklusion}"']
-          & A
-            \arrow[l,yshift=2.5,"◯"']
+          (\Fix(f∘g),≤_B)
+          \arrow[r,yshift=-2.5,"g"']
+          & (\Fix(g∘f),≤_A)
+          \arrow[l,yshift=2.5,"f"', "\sim" yshift=0.5pt]
         \end{tikzcd}
       \end{equation*}
-      Folgere die Existenz von Galoisverbindungen zwischen Potenzmenge, Menge von Idealen und Menge von Radikalidealen eines kommutativen Ringes $R$:
-      \begin{equation*}
-        \begin{tikzcd}
-          (\mathrm{Idl}(R),⊆)
-            \arrow[r,yshift=-2.5,hookrightarrow]
-          & (𝒫(R),⊆)
-            \arrow[l,yshift=2.5,"(\_)"']
-        \end{tikzcd}
-        ,\qquad
-        \begin{tikzcd}
-          (\mathrm{Rad}(R),⊆)
-            \arrow[r,yshift=-2.5,hookrightarrow]
-          & (\mathrm{Idl}(R),⊆)
-            \arrow[l,yshift=2.5,"\sqrt{-}"']
-        \end{tikzcd}.
-      \end{equation*}
-    \item Seien $X$, $Y$ Mengen und $R ⊆ X × Y$ eine Relation von $X$ nach $Y$.
-      Zeige, dass die folgenden Abbildungen eine Galoisverbindung zwischen den Potenzmengen von $X$ und $Y$ bilden.
-      \begin{align*}
-        𝒱_R : (𝒫(X),⊇) &\leftrightarrows (𝒫(Y),⊆) : ℐ_R\\
-        S & \longmapsto \{y ∈ Y \mid ∀s ∈ S:sRy\}\\
-        \{x ∈ X \mid ∀t ∈ T:xRt\} & \longmapsfrom T
-      \end{align*}
-      {\scriptsize Beachte, dass hier $≤_B$ die Teilmengenrelation $⊆$ und $≤_A$ die umgekehrte Teilmengenrelation $⊇$ ist.}\\
-      Folgere die Existenz einer Galoisverbindung zwischen den Potenzmengen des Polynomrings $K[x_1,\dots,x_n]$ und des affinen Raums $𝔸^n_K$ über einem Körper $K$.
-      \begin{equation*}
-        \begin{tikzcd}
-          (𝒫(K[x_1,\dots,x_n]),⊇)
-            \arrow[r,yshift=-2.5,"𝒱"']
-          & (𝒫(𝔸^n_K),⊆)
-            \arrow[l,yshift=2.5,"ℐ"']
-        \end{tikzcd}
-      \end{equation*}
-    \item Seien
-      $
-        i:C ⇆ B:h$ und $g:B ⇆ A:f
-        $
-        Galoisverbindungen.
-      Zeige, dass
-      $
-        g∘i:C ⇆ A:h∘f
-        $
-        eine Galoisverbindung bildet.
-    \item Sei $g:B⇆A:f$ eine Galoisverbindung.
-      Zeige, dass $g∘f∘g=g$ und $f∘g∘f=f$.
-      Folgere, dass jede Galoisverbindung einen Hüllenoperator $f∘g:B → B$ auf $B$ und einen Hüllenoperator $g∘f:A → A$ auf $A$ induziert.
+      {\scriptsize Zur Erinnerung: Ein Fixpunkt einer Selbstabbildung $s:X → X$ ist ein Element $x ∈ X$ mit $s(x)=x$.}
+  \end{enumerate}
+  Sei $K$ ein algebraisch abgeschlossener Körper.
+  \begin{enumerate}[start=4]
+    \item Verwende Hilberts Nullstellensatz um die Existenz einer Galoiskorrespondenz zwischen den Radikalidealen von $K[x_1,\dots,x_n]$ und den affinen Varietäten in $𝔸^n_K$ zu zeigen.
+    \item Zeige, dass diese Galoiskorrespondenz einschränkt zu einer Galoiskorrespondenz zwischen den maximalen Idealen von $K[x_1,\dots,x_n]$ und den Punkten in $𝔸^n_K$.
   \end{enumerate}
 \end{exercise}
 
-  
-  Ist $S⊆A$ eine Teilmenge, so nennen wir ein Element $a ∈ A$ eine \emph{untere (bzw.~obere) Schranke} von $S$, falls $a ≤ s$ (bzw.~$s ≤ a$) für alle $s ∈ S$.
-    Eine untere (obere) Schranke, die in $S$ enthalten ist, heißt \emph{Minimum (Maximum)} von $S$.
-  \begin{enumerate}
-    \item Zeige, dass Minima und Maxima einer Teilmenge eindeutig sind, falls sie existieren.
-  \end{enumerate}
-  Das Minimum (Maximum) $s$ der Menge aller oberen (unteren) Schranken von $S$, sofern existent, heißt \emph{Supremum (Infimum)} von $S$.
-  Wir schreiben dann $s=\sup(S)$ (bzw.~$s=\inf(S)$).
-  \begin{enumerate}[start=2]
-    \item Sei $f:A ↔ B:g$ eine Galoisverbindung.
-      \begin{enumerate}
-        \item Zeige, dass $f$ Suprema erhält, das heißt $f(\sup S)=\sup f(S)$ für $S⊆A$.
-        \item Folgere, dass $g$ Infima erhält, das heißt $g(\inf T)=\inf g(T)$ für $T⊆B$.
-      \end{enumerate}
-  \end{enumerate}
-
+%\begin{exercise}[Suprema, Infima und Idealoperationen]
+%  Sei $(A,≤)$ eine teilweise geordnete Menge und $M⊆A$.
+%  Ein \emph{Supremum} von $M$ ist ein Element $a ∈ A$, welches folgende Eigenschaften erfüllt:
+%  \begin{align*}
+%    &∀m ∈ M:m ≤ a\\
+%    &∀a' ∈ A: (∀m ∈ M:m ≤ a') ⇒ a ≤ a'
+%  \end{align*}
+%  Dual dazu ist ein \emph{Infimum} von $M$ definiert als Supremum von $M$ aufgefasst als Teilmenge der umgekehrt geordneten Menge $(A,≥)$.
+%  \begin{enumerate}
+%    \item Zeige, dass Supremum und Infimum eindeutig sind, falls sie existieren.
+%      In diesem Fall schreiben wir $⋁ M$ für das Supremum und $⋀ M$ für das Infimum.
+%    \item Sei $◯:A → A$ ein Hüllenoperator auf einer teilweise geordnete Menge $(A,≤)$.
+%      \begin{enumerate}
+%        \item Zeige, dass $◯(a) = ⋀ \{x ∈ \Fix(◯) \mid a ≤ x\}$ für alle $a ∈ A$.
+%      \end{enumerate}
+%      Wir fassen die Fixpunktmenge von $◯$ nun als teilweise geordnete Teilmenge $(\Fix(◯),≤)$ von $(A,≤)$ auf.
+%      Sei $M⊆\Fix(◯)$ und notiere mit $⋀ M$ bzw. $⋁ M$ das Infimum bzw. Supremum von $M$ \emph{in $A$}.
+%      Zeige:
+%      \begin{enumerate}[start=2]
+%        \item Das Infimum von $M$ in $\Fix(M)$ ist gegeben als
+%        \item Das Supremum einer Teilmenge $M⊆\Fix(◯)$ in $(\Fix(◯),≤\vert_{\Fix(◯})$ ist gegeben durch $◯(⋁ M)$, wobei $⋁ M$ das Supremum von $M$ in $A$ ist.
+%      \end{enumerate}
+%
+%    \item Berechne das Supremum und Infimum
+%      \begin{enumerate}
+%        \item einer Menge $M⊆𝒫(X)$ von Teilmengen einer Menge $X$,
+%        \item einer Menge $M⊆\Idl(R)$ von Idealen eines kommutativen Rings $R$,
+%        \item einer Menge $M⊆\Rad(R)$ von Radikalen eines kommutativen Rings $R$.
+%      \end{enumerate}
+%    \item Sei $g:B ⇆ A:f$ eine Galoisverbindung.
+%      Zeige, dass $g$ Infima und $f$ Suprema erhält.
+%      Das heißt für jede Teilmenge $M⊆B$ und $N⊆A$ ist
+%      \begin{align*}
+%        g \left( ⋀ M \right) = ⋀ g(M),\\
+%        f \left( ⋁ M \right) = ⋁ f(M).
+%      \end{align*}
+%      Folgere die nachfolgenden Regeln für die Verschwindungsmenge einer Familie von Idealen $(𝖆_i)_{i ∈ I}$ des Polynomrings $K[x_1,\dots,x_n]$ über einem Körper $K$:
+%      $$
+%      𝒱(⋃_{i ∈ I}𝖆_i) = 𝒱(∑_{i ∈ I}𝖆_i) = ⋂_{i ∈ I}𝒱(𝖆_i)
+%      $$
+%    \item Sei $K$ ein Körper, $(S_i)_{i ∈ I}$ eine Familie von Teilmengen, $(𝖆_i)_{i ∈ I}$ eine Familie von Idealen und $(𝖗_i)_{i ∈ I}$ eine Familie radikaler Ideal von $K[x_1,\dots,x_n]$.
+%      Zeige die folgenden Regeln für $𝒱$ und $ℐ$:
+%      \begin{multicols}{2}
+%        \begin{enumerate}
+%          \item $𝒱(∑𝖆_i) = ⋂𝒱(𝖆_i)$
+%          \item $𝒱(I∩J)=𝒱(I)∪𝒱(J)$
+%        \end{enumerate}
+%      \end{multicols}
+%    \item Sei $𝒫(X)$ die durch Inklusion teilweise geordnete Potenzmenge einer Menge $X$.
+%      Berechne Supremum und Infimum einer Familie von Teilmengen $(S_i)_{i ∈ I}$ von $X$.
+%    \item Sei $\Idl(R)$ die durch Inklusion teilweise geordnete Menge aller Ideale eines kommutativen Ringes $R$.
+%      Berechne Supremum und Infimum einer Familie von Idealen $(𝖆_i)_{i ∈ I}$.
+%    \item Sei $\Rad(R)$ die durch Inklusion teilweise geordnete Menge der radikalen Ideale eines kommutativen Ringes $R$.
+%      Berechne Supremum und Infimum einer Familie von Radikalen $(𝖗_i)_{i ∈ I}$.
+%  \end{enumerate}
+%\end{exercise}
 \end{document}
