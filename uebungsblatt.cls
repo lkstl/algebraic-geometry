@@ -21,23 +21,23 @@
 \setenumerate[1]{label=(\alph*),topsep=0pt}
 \setenumerate[2]{label=(\roman*),topsep=0pt}
 
-\renewcommand{\maketitle}[7]{
+\renewcommand{\maketitle}[6]{
   \pagestyle{empty}
   {#1}\hfill % Universität
-  {#2}\\ % Dozent
-  {#3}\hfill % Institut
-  {#4}\\ % Assisstent
-  {#5}\\ % Semester
+  {#5}\\ % Dozent
+  {#2}\hfill % Institut
+  {#6}\\ % Assisstent
+  {#3}\\ % Semester
   \begin{center}
     \Large\bfseries
-    {#6}.~Übungsblatt zur {#7} % Nummer des Übungsblattes, Vorlesungsname
+    Exercises for {#4} % Vorlesungsname
   \end{center}
   \vspace{1.5em}
 }
 
 \newcounter{exc}
 \newenvironment{exercise}[1][]{
-  \addtocounter{exc}{1}\textbf{Aufgabe \theexc.} \emph{#1}\par
+  \addtocounter{exc}{1}\textbf{Exercise \theexc.} \emph{#1}\par
 }{\vspace{1.5em}}
 \newenvironment{bonus}[1][]{
   \textbf{Bonusaufgabe.} \emph{#1}\par
