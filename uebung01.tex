@@ -8,60 +8,71 @@
 \begin{document}
 \maketitle{Universität Augsburg}{Lehrstuhl für Algebra und Zahlentheorie}{Wintersemester 2021/22}{Algebraic Geometry I}{Dr.~Marco Ramponi}{Lukas Stoll, M.Sc.}
 
-Eine \emph{teilweise geordnete Menge} ist eine Menge $A$ zusammen mit einer reflexiven, transitiven und antisymmetrischen Relation $≤$.
-Eine Abbildung $f:A → B$ zwischen teilweise geordneten Mengen heißt \emph{ordnungserhaltend} falls $a ≤_A a'$ impliziert, dass $f(a) ≤_B f(a')$.
+A \emph{partially ordered set}, or short \emph{poset}, is a set $A$ equipped with a reflexive, transitive and antisymmetric relation $≤$.
+A map $f:A → B$ between partially ordered sets is \emph{order preserving} if $a ≤_A a'$ implies $f(a) ≤_B f(a')$.
 
-\begin{exercise}[Galoisverbindungen]
-  Eine \emph{Galoisverbindung} zwischen zwei teilweise geordneten Mengen ist ein Paar ordnungserhaltender Abbildungen $g:(B,≤_B) ⇆ (A,≤_A):f$, welches folgende \emph{Adjunktionseigenschaft} für alle $a ∈ A$, $b ∈ B$ erfüllt:
+\begin{exercise}[Galois connections]
+  A \emph{Galois connection} between two partially ordered sets is a pair of order preserving maps $g:(B,≤_B) ⇆ (A,≤_A):f$ which satisfies the following \emph{adjunction property} for all $a ∈ A$, $b ∈ B$:
   $$
-  f(a) ≤_B b ⇔ a ≤_A g(b)
+  f(a) ≤_B b \quad\Longleftrightarrow\quad a ≤_A g(b)
   $$
   \begin{enumerate}
-    \item Seien $X$, $Y$ Mengen und $⊥ ⊆ X × Y$ eine Relation von $X$ nach $Y$.
-      Zeige, dass die folgenden Abbildungen eine Galoisverbindung zwischen den Potenzmengen von $X$ und $Y$ bilden.
+    \item Let $X$, $Y$ be sets and $⊥ ⊆ X × Y$ a relation from $X$ to $Y$.
+      Prove that the following maps form a Galois connection between the power sets of $X$ and $Y$.
       \begin{align*}
         𝒱_R : (𝒫(X),⊇) &\leftrightarrows (𝒫(Y),⊆) : ℐ_R\\
         S & \longmapsto \{y ∈ Y \mid ∀s ∈ S:s \perp y\}\\
         \{x ∈ X \mid ∀t ∈ T:x \perp t\} & \longmapsfrom T
       \end{align*}
-      {\scriptsize Beachte, dass hier $≤_A$ die Teilmengenrelation $⊆$ und $≤_B$ die umgekehrte Teilmengenrelation $⊇$ ist!
-      Eine ordungserhaltende Abbildung würde man hier also eher inklusions\emph{umkehrend} nennen.}
-    \item Sei $K$ ein Körper.
-      Folgere die Existenz einer Galoisverbindung
+      {\scriptsize Note that $≤_A$ is the subset relation $⊆$ and $≤_B$ the reverse subset relation $⊇$, making order preserving maps between the two powersets \emph{inclusion reversing}.}
+    \item Let $K$ be a field.
+      Show the existence of a Galois connection
       $$
       𝒱:(𝒫(K[x_1,\dots,x_n]),⊇) ⇆ (𝒫(𝔸^n_K),⊆):ℐ
       $$
-      zwischen den Potenzmengen des Polynomrings $K[x_1,\dots,x_n]$ und des affinen Raums $𝔸^n_K$, sodass $𝒱(S)$ die Verschwindungsmenge von $S⊆K[x_1,\dots,x_n]$ und $ℐ(T)$ das Verschwindungsideal von $T⊆𝔸^n_K$ ist.
-    \item Bezeichne $\Idl(R)$ die Menge der Ideale eines kommutativen Rings $R$.
-      Zeige, dass $ℐ(T)$ für jedes $T⊆𝔸^n_K$ ein Ideal ist und folgere, dass obige Galoisverbindung zu einer Galoisverbindung $𝒱:(\Idl(K[x_1,\dots,x_n]),⊇) ⇆ (𝒫(𝔸^n_K),⊆):ℐ$ absteigt.
-    \item Bezeichne $\Rad(R)$ die Menge der radikalen Ideale eines kommutativen Rings $R$.
-    Zeige, dass $ℐ(T)$ für jedes $T⊆𝔸^n_K$ radikal ist und folgere, dass obige Galoisverbindung zu einer Galoisverbindung $𝒱:(\Rad(K[x_1,\dots,x_n]),⊇) ⇆ (𝒫(𝔸^n_K),⊆):ℐ$ absteigt.\\
-      {\scriptsize Ein Ideal $I⊆R$ heißt \emph{radikal}, falls für jedes $f ∈ R$ die Existenz eines $n ∈ ℕ$ mit $f^n ∈ I$ schon $f ∈ I$ impliziert.}
+      between the power sets of the polynomial ring $K[x_1,\dots,x_n]$ and the affine space $𝔸^n_K$, such that $𝒱(S)$ is the vanishing set of $S⊆K[x_1,\dots,x_n]$ and $ℐ(T)$ the vanishing ideal of $T⊆𝔸^n_K$.
+    \item Let $\Idl(R)$ denote the set of ideals of a commutative ring $R$.
+      Show that $ℐ(T)$ is an ideal for every $T⊆𝔸^n_K$ and conclude that the above Galois connection descends to a Galois connection $𝒱:(\Idl(K[x_1,\dots,x_n]),⊇) ⇆ (𝒫(𝔸^n_K),⊆):ℐ$.
+    \item Let $\Rad(R)$ denote the set of radical ideals of a commutative ring $R$.
+      Show that $ℐ(T)$ is radical for every $T⊆𝔸^n_K$ and conclude that the above Galois connection descends to a Galois connection $𝒱:(\Rad(K[x_1,\dots,x_n]),⊇) ⇆ (𝒫(𝔸^n_K),⊆):ℐ$.\\
+      {\scriptsize An ideal $𝖆 ⊆ R$ is \emph{radical} if $∀f ∈ R : (∃n ∈ ℕ : f^n ∈ 𝖆) ⇒ f ∈ 𝖆$.}
     %\item Finde eine Galoisverbindung zwischen den Zwischenkörpern $E$ einer Galoiserweiterung $L/K$ und den Untergruppen der Galoisgruppe $\mathrm{Gal}(L/K)$.
   \end{enumerate}
 \end{exercise}
 
-\begin{exercise}[Hüllenoperatoren]
-  Ein \emph{Hüllenoperator} auf einer teilweise geordneten Menge $A$ ist eine ordnungserhaltende Abbildung $◯:A → A$, welche \emph{idempotent} und \emph{extensiv} ist.
-  Das heißt $◯(◯(a))=◯(a)$ und $a ≤ ◯(a)$ für alle $a ∈ A$.
+\begin{exercise}[Closure operators]
+  A \emph{closure operator} on a poset $A$ is an order preserving map $◯:A → A$ which is \emph{idempotent}, $◯(◯(a)) = a$, and \emph{extensive}, $a ≤ ◯(a)$.
 
-  Sei im Folgenden $R$ ein kommutativer Ring und $K$ ein Körper.
+  Let $g:B ⇆ A:f$ be a Galois connection.
   \begin{enumerate}
-    \item Zeige, dass die Abbildung $(\_):𝒫(R) → 𝒫(R)$, welche einer Teilmenge $S⊆R$ das von ihr erzeugte Ideal $(S)\coloneqq \{r_1s_1 + \dots + r_ns_n \mid n ∈ ℕ,\, r_i ∈ R,\, s_i ∈ S\}$ zuordnet, ein Hüllenoperator auf $(𝒫(R),⊆)$ ist.
-    \item Zeige, dass $𝒱((S))=𝒱(S)$ für jede Teilmenge $S⊆K[x_1,\dots,x_n]$.
-    \item Zeige, dass die Abbildung $\sqrt{-}:\Idl(R) → \Idl(R)$, welche einem Ideal $I$ sein Radikal $\sqrt{I}\coloneqq\{r ∈ R \mid ∃n ∈ ℕ : r^n ∈ I\}$ zuordnet, ein Hüllenoperator auf $(\Idl(R),⊆)$ ist.
-    \item Zeige, dass $𝒱(\sqrt{I})=𝒱(I)$ für jedes Ideal $I⊆K[x_1,\dots,x_n]$.
+    \item Show that $g∘f$ is a closure operator on $(A,≤_A)$.
+    \item Show that $f∘g$ is a closure operator on $(B,≥_B)$.
+      {\scriptsize Mind the reverse ordering!}
+  \end{enumerate}
+  Let $R$ be a commutative ring.
+  Prove that the following maps are closure operators.
+  \begin{enumerate}[start=3]
+    \item The map $(\_):𝒫(R) → 𝒫(R)$ sending a subset $S⊆R$ to the ideal it generates. 
+      $$
+      (S)\coloneqq \{r_1s_1 + \dots + r_ns_n \mid n ∈ ℕ,\, r_i ∈ R,\, s_i ∈ S\}
+      $$
+    \item The map $\sqrt{-}:\Idl(R) → \Idl(R)$ sending an ideal $𝖆⊆R$ to its radical.
+      $$
+      \sqrt{𝖆}\coloneqq\{r ∈ R \mid ∃n ∈ ℕ : r^n ∈ 𝖆\}
+      $$
+  \end{enumerate}
+  Let $K$ be a field.
+  Prove:
+  \begin{enumerate}[start=5]
+    \item $𝒱((S))=𝒱(S)$ for every subset $S⊆K[x_1,\dots,x_n]$.
+    \item $𝒱(\sqrt{I})=𝒱(I)$ for every ideal $I⊆K[x_1,\dots,x_n]$.
   \end{enumerate}
 \end{exercise}
 
-\begin{exercise}[Galoiskorrespondenzen]
-
-  Sei $g:B ⇆ A:f$ eine Galoisverbindung.
+\begin{exercise}[Galois correspondences]
+  A Galois connection $g:B ⇆ A:f$ is a \emph{Galois correspondence} if $f$ and $g$ are mutually inverse.
   \begin{enumerate}
-    \item Zeige, dass $g∘f$ ein Hüllenoperator auf $(A,≤_A)$ ist.
-    \item Zeige, dass $f∘g$ ein Hüllenoperator auf $(B,≥_B)$ ist. {\scriptsize Beachte die umgekehrte Ordnung.}
-    \item Eine Galoisverbindung deren Abbildungen zueinander invers sind, heißt \emph{Galoiskorrespondenz}.
-      Zeige, dass die gegebene Galoisverbindung eine Galoiskorrespondenz zwischen den Fixpunktmengen ihrer assoziierten Hüllenoperatoren induziert.\\
+    \item Show that a Galois connection induces a Galois correspondence between the the sets of fixed points of its associated closure operators.
       \begin{equation*}
         \begin{tikzcd}
           (\Fix(f∘g),≤_B)
@@ -70,12 +81,13 @@ Eine Abbildung $f:A → B$ zwischen teilweise geordneten Mengen heißt \emph{ord
           \arrow[l,yshift=2.5,"f"', "\sim" yshift=0.5pt]
         \end{tikzcd}
       \end{equation*}
-      {\scriptsize Zur Erinnerung: Ein Fixpunkt einer Selbstabbildung $s:X → X$ ist ein Element $x ∈ X$ mit $s(x)=x$.}
+      {\scriptsize A fixed point of an endomap $s:X → X$ is an element $x ∈ X$ with $s(x)=x$.}
   \end{enumerate}
-  Sei $K$ ein algebraisch abgeschlossener Körper.
-  \begin{enumerate}[start=4]
-    \item Verwende Hilberts Nullstellensatz um die Existenz einer Galoiskorrespondenz zwischen den Radikalidealen von $K[x_1,\dots,x_n]$ und den affinen Varietäten in $𝔸^n_K$ zu zeigen.
-    \item Zeige, dass diese Galoiskorrespondenz einschränkt zu einer Galoiskorrespondenz zwischen den maximalen Idealen von $K[x_1,\dots,x_n]$ und den Punkten in $𝔸^n_K$.
+  Let $K$ be an algebraically closed field.
+  \begin{enumerate}[start=2]
+    \item Find a Galois correspondence between the radical ideals of $K[x_1,\dots,x_n]$ and the affine varieties in $𝔸^n_K$.
+      {\scriptsize Use Hilbert's Nullstellensatz.}
+    \item Show that this Galois correspondence restricts to a Galois correspondence between the maximal ideals of $K[x_1,\dots,x_n]$ and the points in $𝔸^n_K$.
   \end{enumerate}
 \end{exercise}
 
@@ -98,7 +110,7 @@ Eine Abbildung $f:A → B$ zwischen teilweise geordneten Mengen heißt \emph{ord
 %      Sei $M⊆\Fix(◯)$ und notiere mit $⋀ M$ bzw. $⋁ M$ das Infimum bzw. Supremum von $M$ \emph{in $A$}.
 %      Zeige:
 %      \begin{enumerate}[start=2]
-%        \item Das Infimum von $M$ in $\Fix(M)$ ist gegeben als
+%        \item Das Infimum von $M$ in $\Fix()$ ist gegeben als
 %        \item Das Supremum einer Teilmenge $M⊆\Fix(◯)$ in $(\Fix(◯),≤\vert_{\Fix(◯})$ ist gegeben durch $◯(⋁ M)$, wobei $⋁ M$ das Supremum von $M$ in $A$ ist.
 %      \end{enumerate}
 %
