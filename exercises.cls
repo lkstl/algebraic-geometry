@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{uebungsblatt}[2021/10/21]
+\ProvidesClass{exercises}[2021/10/21]
 
 \LoadClass[a4paper]{article}
 
