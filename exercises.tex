@@ -91,29 +91,28 @@ A map $f:A → B$ between partially ordered sets is \emph{order preserving} if $
   \end{enumerate}
 \end{exercise}
 
-%\begin{exercise}[Suprema, Infima und Idealoperationen]
-%  Sei $(A,≤)$ eine teilweise geordnete Menge und $M⊆A$.
-%  Ein \emph{Supremum} von $M$ ist ein Element $a ∈ A$, welches folgende Eigenschaften erfüllt:
-%  \begin{align*}
-%    &∀m ∈ M:m ≤ a\\
-%    &∀a' ∈ A: (∀m ∈ M:m ≤ a') ⇒ a ≤ a'
-%  \end{align*}
-%  Dual dazu ist ein \emph{Infimum} von $M$ definiert als Supremum von $M$ aufgefasst als Teilmenge der umgekehrt geordneten Menge $(A,≥)$.
-%  \begin{enumerate}
-%    \item Zeige, dass Supremum und Infimum eindeutig sind, falls sie existieren.
-%      In diesem Fall schreiben wir $⋁ M$ für das Supremum und $⋀ M$ für das Infimum.
-%    \item Sei $◯:A → A$ ein Hüllenoperator auf einer teilweise geordnete Menge $(A,≤)$.
-%      \begin{enumerate}
-%        \item Zeige, dass $◯(a) = ⋀ \{x ∈ \Fix(◯) \mid a ≤ x\}$ für alle $a ∈ A$.
-%      \end{enumerate}
-%      Wir fassen die Fixpunktmenge von $◯$ nun als teilweise geordnete Teilmenge $(\Fix(◯),≤)$ von $(A,≤)$ auf.
-%      Sei $M⊆\Fix(◯)$ und notiere mit $⋀ M$ bzw. $⋁ M$ das Infimum bzw. Supremum von $M$ \emph{in $A$}.
-%      Zeige:
-%      \begin{enumerate}[start=2]
-%        \item Das Infimum von $M$ in $\Fix()$ ist gegeben als
-%        \item Das Supremum einer Teilmenge $M⊆\Fix(◯)$ in $(\Fix(◯),≤\vert_{\Fix(◯})$ ist gegeben durch $◯(⋁ M)$, wobei $⋁ M$ das Supremum von $M$ in $A$ ist.
-%      \end{enumerate}
-%
+\begin{exercise}[Suprema, Infima und Idealoperationen]
+  Let $(A,≤)$ be a poset and $M⊆A$.
+  An upper bound $a ∈ A$ of $M$ (that is, $m ≤ a$ for all $m ∈ M$) is called a \emph{join} or \emph{supremum} of $M$ if it satisfies the following universal property:
+  $$
+  ∀a' ∈ A: (∀m ∈ M:m ≤ a') ⇒ a ≤ a'
+  $$
+  Dually $a$ is a \emph{meet} or \emph{infimum} of $M$ if it is a join of $M$ in the poset $(A,≥)$ with reversed ordering.
+  \begin{enumerate}
+    \item Show that meets and joins are unique if they exist.
+      In case of existence, we write $⋁ M$ for the join of $M$ and $⋀ M$ for its meet.
+    \item Let $◯:A → A$ be a closure operator on a poset $(A,≤)$.
+      \begin{enumerate}
+        \item Show that $◯(a) = ⋀ \{x ∈ \Fix(◯) \mid a ≤ x\}$ for all $a ∈ A$.
+      \end{enumerate}
+      Regard $\Fix(◯)$ as a subposet of $(A,≤)$ via the inclusion $i:\Fix(◯)↪A$.
+      To distinguish between meets in $\Fix(◯)$ and meets in $A$ we write $⋀^{\Fix(◯)}$ respectively $⋀^A$ (and similarly for joins).
+      Let $M⊆\Fix(◯)⊆A$ and suppose that meet $⋀^A M$ and join $⋁^A M$ exist in $A$.
+      \begin{enumerate}
+        \item $⋀^{\Fix(◯)}M = ⋀^A M$, in particular $⋀^A M$ is a fixed point.
+        \item $⋁^{\Fix(◯)} M = ◯ (⋁^A M)$.
+      \end{enumerate}
+
 %    \item Berechne das Supremum und Infimum
 %      \begin{enumerate}
 %        \item einer Menge $M⊆𝒫(X)$ von Teilmengen einer Menge $X$,
@@ -145,6 +144,6 @@ A map $f:A → B$ between partially ordered sets is \emph{order preserving} if $
 %      Berechne Supremum und Infimum einer Familie von Idealen $(𝖆_i)_{i ∈ I}$.
 %    \item Sei $\Rad(R)$ die durch Inklusion teilweise geordnete Menge der radikalen Ideale eines kommutativen Ringes $R$.
 %      Berechne Supremum und Infimum einer Familie von Radikalen $(𝖗_i)_{i ∈ I}$.
-%  \end{enumerate}
-%\end{exercise}
+  \end{enumerate}
+\end{exercise}
 \end{document}
