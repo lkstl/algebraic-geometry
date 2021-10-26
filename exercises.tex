@@ -70,7 +70,7 @@ A map $f:A → B$ between partially ordered sets is \emph{order preserving} if $
 \end{exercise}
 
 \begin{exercise}[Galois correspondences]
-  A Galois connection $g:B ⇆ A:f$ is a \emph{Galois correspondence} if $f$ and $g$ are mutually inverse.
+  A Galois connection $g:B ⇆ A:f$ is a \emph{Galois correspondence} if $f$ and $g$ are mutual inverses.
   \begin{enumerate}
     \item Show that a Galois connection induces a Galois correspondence between the the sets of fixed points of its associated closure operators.
       \begin{equation*}
@@ -91,34 +91,35 @@ A map $f:A → B$ between partially ordered sets is \emph{order preserving} if $
   \end{enumerate}
 \end{exercise}
 
-\begin{exercise}[Suprema, Infima und Idealoperationen]
+\begin{exercise}[Joins and meets]
   Let $(A,≤)$ be a poset and $M⊆A$.
   An upper bound $a ∈ A$ of $M$ (that is, $m ≤ a$ for all $m ∈ M$) is called a \emph{join} or \emph{supremum} of $M$ if it satisfies the following universal property:
   $$
   ∀a' ∈ A: (∀m ∈ M:m ≤ a') ⇒ a ≤ a'
   $$
-  Dually $a$ is a \emph{meet} or \emph{infimum} of $M$ if it is a join of $M$ in the poset $(A,≥)$ with reversed ordering.
-  \begin{enumerate}
-    \item Show that meets and joins are unique if they exist.
-      In case of existence, we write $⋁ M$ for the join of $M$ and $⋀ M$ for its meet.
-    \item Let $◯:A → A$ be a closure operator on a poset $(A,≤)$.
-      \begin{enumerate}
-        \item Show that $◯(a) = ⋀ \{x ∈ \Fix(◯) \mid a ≤ x\}$ for all $a ∈ A$.
-      \end{enumerate}
-      Regard $\Fix(◯)$ as a subposet of $(A,≤)$ via the inclusion $i:\Fix(◯)↪A$.
-      To distinguish between meets in $\Fix(◯)$ and meets in $A$ we write $⋀^{\Fix(◯)}$ respectively $⋀^A$ (and similarly for joins).
-      Let $M⊆\Fix(◯)⊆A$ and suppose that meet $⋀^A M$ and join $⋁^A M$ exist in $A$.
-      \begin{enumerate}
-        \item $⋀^{\Fix(◯)}M = ⋀^A M$, in particular $⋀^A M$ is a fixed point.
-        \item $⋁^{\Fix(◯)} M = ◯ (⋁^A M)$.
-      \end{enumerate}
+  Dually $a$ is a \emph{meet} or \emph{infimum} of $M$ if it is a join of $M$ in the poset $(A,≥)$ with reverse ordering.
+  If each finite subset has a join and a meet, $A$ is called a \emph{lattice}.
+  If this holds for all subsets, the lattice is said to be \emph{complete}.
 
-%    \item Berechne das Supremum und Infimum
-%      \begin{enumerate}
-%        \item einer Menge $M⊆𝒫(X)$ von Teilmengen einer Menge $X$,
-%        \item einer Menge $M⊆\Idl(R)$ von Idealen eines kommutativen Rings $R$,
-%        \item einer Menge $M⊆\Rad(R)$ von Radikalen eines kommutativen Rings $R$.
-%      \end{enumerate}
+  \begin{enumerate}
+    \item Show that meets and joins are unique if they exist.  In case of existence, write $⋁ M$ for the join of $M$ and $⋀ M$ for its meet.
+
+    \item Let $◯:A → A$ be a closure operator on a poset $(A,≤)$.
+    Let $M⊆\Fix(◯)$ and regard $\Fix(◯)$ as a subposet of $(A,≤)$.
+      Prove:
+      \begin{enumerate}
+        \item A meet of $M$ in $A$ is a fixed point of $◯$.
+          Moreover, it is the meet of $M$ in $\Fix(◯)$.
+        \item If $M$ has a join in $A$, its image under $◯$ is the join of $M$ in $\Fix(◯)$.
+        \item Deduce that $\Fix(◯)$ is a complete lattice if $A$ is.
+        \item Prove that $◯(a) = ⋀ \{m ∈ \Fix(◯) \mid a ≤ m\}$ for all $a ∈ A$.
+      \end{enumerate}
+    \item Compute meet and join of
+      \begin{enumerate}
+        \item a set $M⊆𝒫(X)$ of subsets of a set $X$,
+        \item a set $M⊆\Idl(X)$ of ideals of a commutative ring $R$,
+        \item a set $M⊆\Rad(X)$ of radical ideals of a commutative ring $R$.
+      \end{enumerate}
 %    \item Sei $g:B ⇆ A:f$ eine Galoisverbindung.
 %      Zeige, dass $g$ Infima und $f$ Suprema erhält.
 %      Das heißt für jede Teilmenge $M⊆B$ und $N⊆A$ ist
@@ -138,12 +139,6 @@ A map $f:A → B$ between partially ordered sets is \emph{order preserving} if $
 %          \item $𝒱(I∩J)=𝒱(I)∪𝒱(J)$
 %        \end{enumerate}
 %      \end{multicols}
-%    \item Sei $𝒫(X)$ die durch Inklusion teilweise geordnete Potenzmenge einer Menge $X$.
-%      Berechne Supremum und Infimum einer Familie von Teilmengen $(S_i)_{i ∈ I}$ von $X$.
-%    \item Sei $\Idl(R)$ die durch Inklusion teilweise geordnete Menge aller Ideale eines kommutativen Ringes $R$.
-%      Berechne Supremum und Infimum einer Familie von Idealen $(𝖆_i)_{i ∈ I}$.
-%    \item Sei $\Rad(R)$ die durch Inklusion teilweise geordnete Menge der radikalen Ideale eines kommutativen Ringes $R$.
-%      Berechne Supremum und Infimum einer Familie von Radikalen $(𝖗_i)_{i ∈ I}$.
   \end{enumerate}
 \end{exercise}
 \end{document}
