@@ -21,16 +21,23 @@
 \setenumerate[1]{label=(\alph*),topsep=0pt}
 \setenumerate[2]{label=(\roman*),topsep=0pt}
 
+\renewcommand{\title}{Hello}
 \renewcommand{\maketitle}[6]{
+  % #1 : University
+  % #2 : Institute
+  % #3 : Semester
+  % #4 : Teacher
+  % #5 : Teaching assistant
+  % #6 : Course
   \pagestyle{empty}
-  {#1}\hfill % Universität
-  {#5}\\ % Dozent
-  {#2}\hfill % Institut
-  {#6}\\ % Assisstent
-  {#3}\\ % Semester
+  {#1}\hfill
+  {#4}\\
+  {#2}\hfill
+  {#5}\\
+  {#3}\\
   \begin{center}
     \Large\bfseries
-    Exercises for {#4} % Vorlesungsname
+    Exercises for {#6}
   \end{center}
   \vspace{1.5em}
 }
