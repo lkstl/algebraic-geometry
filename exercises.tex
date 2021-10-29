@@ -36,7 +36,6 @@
     \item Let $\Rad(R)$ denote the set of radical ideals of a commutative ring $R$.
       Show that $ℐ(T)$ is radical for every $T⊆𝔸^n_K$ and conclude that the above Galois connection descends to a Galois connection $𝒱:(\Rad(K[x_1,\dots,x_n]),⊇) ⇆ (𝒫(𝔸^n_K),⊆):ℐ$.\\
       {\scriptsize An ideal $𝖆 ⊆ R$ is \emph{radical} if $∀f ∈ R : (∃n ∈ ℕ : f^n ∈ 𝖆) ⇒ f ∈ 𝖆$.}
-    %\item Finde eine Galoisverbindung zwischen den Zwischenkörpern $E$ einer Galoiserweiterung $L/K$ und den Untergruppen der Galoisgruppe $\mathrm{Gal}(L/K)$.
   \end{enumerate}
 \end{exercise}
 
@@ -103,7 +102,12 @@
 
   \begin{enumerate}
     \item Show that meets and joins are unique if they exist.  In case of existence, write $⋁ M$ for the join of $M$ and $⋀ M$ for its meet.
-
+    \item Show that the following are equivalent for a lattice $A$:
+      \begin{enumerate}
+        \item $A$ is complete.
+        \item Every subset of $A$ has a meet.
+        \item Every subset of $A$ has a join.
+      \end{enumerate}
     \item Let $◯:A → A$ be a closure operator on a poset $(A,≤)$.
     Let $M⊆\Fix(◯)$ and regard $\Fix(◯)$ as a subposet of $(A,≤)$.
       Prove:
@@ -118,27 +122,9 @@
       \begin{enumerate}
         \item a set $M⊆𝒫(X)$ of subsets of a set $X$,
         \item a set $M⊆\Idl(X)$ of ideals of a commutative ring $R$,
-        \item a set $M⊆\Rad(X)$ of radical ideals of a commutative ring $R$.
+        \item a set $M⊆\Rad(X)$ of radical ideals of a commutative ring $R$,
       \end{enumerate}
-%    \item Sei $g:B ⇆ A:f$ eine Galoisverbindung.
-%      Zeige, dass $g$ Infima und $f$ Suprema erhält.
-%      Das heißt für jede Teilmenge $M⊆B$ und $N⊆A$ ist
-%      \begin{align*}
-%        g \left( ⋀ M \right) = ⋀ g(M),\\
-%        f \left( ⋁ M \right) = ⋁ f(M).
-%      \end{align*}
-%      Folgere die nachfolgenden Regeln für die Verschwindungsmenge einer Familie von Idealen $(𝖆_i)_{i ∈ I}$ des Polynomrings $K[x_1,\dots,x_n]$ über einem Körper $K$:
-%      $$
-%      𝒱(⋃_{i ∈ I}𝖆_i) = 𝒱(∑_{i ∈ I}𝖆_i) = ⋂_{i ∈ I}𝒱(𝖆_i)
-%      $$
-%    \item Sei $K$ ein Körper, $(S_i)_{i ∈ I}$ eine Familie von Teilmengen, $(𝖆_i)_{i ∈ I}$ eine Familie von Idealen und $(𝖗_i)_{i ∈ I}$ eine Familie radikaler Ideal von $K[x_1,\dots,x_n]$.
-%      Zeige die folgenden Regeln für $𝒱$ und $ℐ$:
-%      \begin{multicols}{2}
-%        \begin{enumerate}
-%          \item $𝒱(∑𝖆_i) = ⋂𝒱(𝖆_i)$
-%          \item $𝒱(I∩J)=𝒱(I)∪𝒱(J)$
-%        \end{enumerate}
-%      \end{multicols}
+      and conclude that $𝒫(X)$, $\Idl(X)$ and $\Rad(X)$ are complete lattices.
   \end{enumerate}
 \end{exercise}
 \end{document}
