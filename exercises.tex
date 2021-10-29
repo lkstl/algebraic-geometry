@@ -5,6 +5,8 @@
 \DeclareMathOperator{\Rad}{Rad}
 \DeclareMathOperator{\Fix}{Fix}
 
+\addbibresource{exercises.bib}
+
 \begin{document}
 \maketitle{Universität Augsburg}{Lehrstuhl für Algebra und Zahlentheorie}{Wintersemester 2021/22}{Dr.~Marco Ramponi}{Lukas Stoll, M.Sc.}{Algebraic Geometry I}
 
@@ -172,7 +174,28 @@
   \end{enumerate}
 \end{exercise}
 
-\begin{exercise}[Chinese remainder theorem]
+\begin{exercise}[Chinese remainder theorem, see {\cite[Ex.~(1.14)]{AltmanKleiman2013}}]
+  Let $R$ be a ring and $𝖆,𝖇⊆R$ ideals.
+  Two ideals $𝖆,𝖇⊆R$ are \emph{comaximal} if $𝖆 + 𝖇 = R$.
+  \begin{enumerate}
+    \item Let $𝖆,𝖇$ be comaximal ideals.
+      Prove:
+      \begin{enumerate}
+        \item $𝖆⋅𝖇 = 𝖆 ∩ 𝖇$.
+        \item $R/(𝖆⋅𝖇) ≅ (R/𝖆) × (R/𝖇)$.
+      \end{enumerate}
+    \item Let $𝖆$ be comaximal to $𝖇$ and $𝖇'$.
+      Prove that $𝖆$ is comaximal to $𝖇⋅𝖇'$.
+    \item Let $𝖆$, $𝖇$ be comaximal and $m,n≥1$.
+      Prove that $𝖆^m$ and $𝖇^n$ are comaximal.
+    \item Let $𝖆_0,\dots,𝖆_n$ be pairwise comaximal.
+      Prove:
+      \begin{enumerate}
+        \item $𝖆_0$ and $𝖆_1,\dots,𝖆_n$ are comaximal.
+        \item $𝖆_0∩\dots∩𝖆_n = 𝖆_0 \cdots 𝖆_n$.
+        \item $R/(𝖆_0\cdots 𝖆_n) ≅ (R/𝖆_0) × \cdots × (R/𝖆_n)$.
+      \end{enumerate}
+  \end{enumerate}
 \end{exercise}
 
 \begin{exercise}
@@ -190,4 +213,5 @@
   \end{enumerate}
 \end{exercise}
 
+\printbibliography
 \end{document}
