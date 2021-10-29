@@ -128,21 +128,22 @@
   \end{enumerate}
 \end{exercise}
 
-\begin{exercise}[Lattice homomorphisms]
+\begin{exercise}[Preservation of joins and meets]
   Let $g:B ⇆ A:f$ be a Galois connection.
+  Show:
   \begin{enumerate}
-    \item Show that $g$ preserves meets and $f$ preserves joins, that is, for every $M⊆B$ and $N⊆A$ we have
-      \begin{equation*}
-        g \left( ⋀ M \right) = ⋀ g(M),\qquad f \left( ⋁ M \right) = ⋁ f(M).
-      \end{equation*}
-    \item Suppose the Galois connection is a Galois correspondence.
-      Show that both maps are complete lattice homomorphisms.
-    \item Let $K$ be a field.
-      Conclude that
-      $$
-        𝒱(∑𝖆_i) = 𝒱(⋃𝖆_i) = ⋂𝒱(𝖆_i), \qquad ℐ(⋃T_i) = ⋂ℐ(T_i),
-      $$
-      where $(𝖆_i)_{i ∈ I}$ is family of ideals $𝖆_i⊆K[x_1,\dots,x_n]$ and $(T_i)_{i ∈ I}$ is a family of subsets $T_i⊆𝔸^n_K$.
+    \item The right adjoint $g$ preserves meets: $g \left( ⋀ M \right) = ⋀ g(M)$ for all $M⊆B$.
+    \item The left adjoint $f$ preserves joins: $f \left( ⋁ N \right) = ⋁ f(N)$ for all $N⊆A$.
+  \end{enumerate}
+  Let $K$ be a field, $(𝖆_i)_{i ∈ I}$ a family of ideals of $K[x_1,\dots,x_n]$, and $(T_i)_{i ∈ I}$ a family of subsets of $𝔸^n_K$.
+  Prove the following equalities:
+  \begin{enumerate}[start=2]
+    \item $𝒱(∑𝖆_i) = 𝒱(⋃𝖆_i) = ⋂𝒱(𝖆_i)$.
+    \item $ℐ(⋃ T_i) = ⋂ℐ(T_i)$.
+  \end{enumerate}
+  Finally, suppose $𝖆,𝖇 ⊆ K[x_1,\dots,x_n]$ are ideals.
+  \begin{enumerate}[start=4]
+    \item Prove that $𝒱(𝖆 ∩ 𝖇) = 𝒱(𝖆 ⋅ 𝖇) = 𝒱(𝖆) ∪ 𝒱(𝖇)$.
   \end{enumerate}
 \end{exercise}
 
