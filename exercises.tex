@@ -127,4 +127,76 @@
       and conclude that $𝒫(X)$, $\Idl(X)$ and $\Rad(X)$ are complete lattices.
   \end{enumerate}
 \end{exercise}
+
+\begin{exercise}[Lattice homomorphisms]
+  Let $g:B ⇆ A:f$ be a Galois connection.
+  \begin{enumerate}
+    \item Show that $g$ preserves meets and $f$ preserves joins, that is, for every $M⊆B$ and $N⊆A$ we have
+      \begin{equation*}
+        g \left( ⋀ M \right) = ⋀ g(M),\qquad f \left( ⋁ M \right) = ⋁ f(M).
+      \end{equation*}
+    \item Suppose the Galois connection is a Galois correspondence.
+      Show that both maps are complete lattice homomorphisms.
+    \item Let $K$ be a field.
+      Conclude that
+      $$
+        𝒱(∑𝖆_i) = 𝒱(⋃𝖆_i) = ⋂𝒱(𝖆_i), \qquad ℐ(⋃T_i) = ⋂ℐ(T_i),
+      $$
+      where $(𝖆_i)_{i ∈ I}$ is family of ideals $𝖆_i⊆K[x_1,\dots,x_n]$ and $(T_i)_{i ∈ I}$ is a family of subsets $T_i⊆𝔸^n_K$.
+  \end{enumerate}
+\end{exercise}
+
+\begin{exercise}[Ideal operations]
+  Let $R$ be a commutative ring and $𝖆,𝖇,𝖈⊆R$ ideals.
+  Recall the definition of the \emph{ideal sum}
+  $$
+  𝖆 + 𝖇 \coloneqq (𝖆 ∪ 𝖇),
+  $$
+  the \emph{ideal product}
+  $$
+  𝖆 ⋅ 𝖇 \coloneqq (\{a ⋅ b ∈ R\mid a ∈ 𝖆, b ∈ 𝖇\}),
+  $$
+  and the \emph{ideal quotient}
+  $$
+  𝖆 : 𝖇 \coloneqq \{r ∈ R \mid r ⋅ 𝖇 ⊆ 𝖆\}.
+  $$
+  \begin{enumerate}
+    \item Show that $𝖆 ∩ 𝖇$ is an ideal but $𝖆 ∪ 𝖇$ is not in general.
+    \item Show that $𝖆 : 𝖇$ is an ideal but $\{a ⋅ b ∈ R \mid a ∈ 𝖆, b ∈ 𝖇\}$ is not in general.
+    \item Prove the \emph{distributive law} $𝖆⋅(𝖇 + 𝖈) = 𝖆⋅𝖇 + 𝖆⋅𝖈$ and the \emph{modular law} $𝖆∩(𝖇 + 𝖈) = 𝖆∩𝖇 + 𝖆∩𝖈$.
+    \item Show that the following inclusions hold
+      $$
+      𝖆 ⋅ 𝖇 ⊆ 𝖆 ∩ 𝖇 ⊆ 𝖆 ∪ 𝖇 ⊆ 𝖆 + 𝖇,
+      $$
+      and find a counterexample for each reverse inclusion.
+    \item Show the following laws for the ideal quotient, where $𝖆_i$ is a family of ideals.
+      \begin{multicols}{2}
+        \begin{enumerate}
+          \item $𝖆 ⊆ 𝖆 : 𝖇$
+          \item $(𝖆 : 𝖇) ⋅ 𝖇 ⊆ 𝖆 $
+          \item $(𝖆 : 𝖇) : 𝖈 = 𝖆 : (𝖇⋅𝖈) = (𝖆 : 𝖇) : 𝖈$
+          \item 
+        \end{enumerate}
+      \end{multicols}
+  \end{enumerate}
+\end{exercise}
+
+\begin{exercise}[Chinese remainder theorem]
+\end{exercise}
+
+\begin{exercise}
+  Let $K$ be a field.
+  Compute the number of monomials of degree $d$ in $n$ variables.\\
+  {\scriptsize This is the dimension of the vector space $K[x_1,\dots,x_n]_d$ of polynomials over $K$ in $n$ variables of degree $d$.}
+\end{exercise}
+
+\begin{exercise}
+  List all $24$ monomials in three variables $K[x,y,z]$ of degree $≤3$ 
+  \begin{enumerate}
+    \item in the lexicographical order,
+    \item in the deg-lex order,
+    \item in the deg-rev-lex order.
+  \end{enumerate}
+\end{exercise}
+
 \end{document}
