@@ -4,6 +4,7 @@
 \DeclareMathOperator{\Idl}{Idl}
 \DeclareMathOperator{\Rad}{Rad}
 \DeclareMathOperator{\Fix}{Fix}
+\DeclareMathOperator{\Spec}{Spec}
 
 \addbibresource{exercises.bib}
 
@@ -211,6 +212,35 @@
     \item in the deg-lex order,
     \item in the deg-rev-lex order.
   \end{enumerate}
+\end{exercise}
+
+\begin{exercise}[The Zariski topology]
+  Let $(A,≤)$ be a partially ordered set.
+  A closure operator $◯:A → A$ is called \emph{topological} or \emph{Kuratowski} if it preserves finite joins.
+  \begin{enumerate}
+    \item Suppose $A$ is the power set of a set $X$.
+      Show that any topological closure operator $◯$ on $A$ induces a topology on $X$ whose closed sets are the fixed points of $◯$.
+      Conversely, show that any topology on $X$ induces a topological closure operator on its power set.
+    \item Let $K$ be a field.
+      Show that the closure operator $𝒱∘ℐ$ on the power set of $𝔸^n_K$ is topological and that its closed sets are the affine varieties.
+    \item More generally, let $R$ be a commutative ring.
+      Find a Galois connection between the power set of $R$ and the power set of its spectrum whose associated closure operator is topological.
+      Show that it induces the Zariski topology.
+    \item In the case that $R=K[x_1,\dots,x_n]$ for a field $K$, find a map $𝔸^n_K → \Spec R$ which is a subspace inclusion with respect to the Zariski topologies.
+  \end{enumerate}
+\end{exercise}
+
+\begin{exercise}[Ring maps induce continuous functions]
+  Let $f:R → S$ be a ring homomorphism.
+  Given a prime ideal $𝖕⊆S$, let $f^*𝖕 \coloneqq f^{-1}𝖕$.
+  \begin{enumerate}
+    \item Show that this defines a continuous map $f^*:\Spec S → \Spec R$.
+    \item Prove that $(g∘f)^*=f^*∘g^*$ for two composable ring maps $f$ and $g$.
+  \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+  Chapter 2 Exercise 9.
 \end{exercise}
 
 \printbibliography
