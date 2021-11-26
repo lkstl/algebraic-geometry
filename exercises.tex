@@ -1,5 +1,6 @@
 \documentclass{exercises}
 
+\DeclareMathOperator{\ev}{ev}
 \DeclareMathOperator{\im}{im}
 \DeclareMathOperator{\Idl}{Idl}
 \DeclareMathOperator{\Rad}{Rad}
@@ -236,6 +237,18 @@
   \begin{enumerate}
     \item Show that this defines a continuous map $f^*:\Spec S → \Spec R$.
     \item Prove that $(g∘f)^*=f^*∘g^*$ for two composable ring maps $f$ and $g$.
+  \end{enumerate}
+\end{exercise}
+
+\begin{exercise}[Polynomials and polynomial functions]
+  Let $W⊆𝔸^n_K$ be an affine variety over a field $K$ and denote the $K$-algebra of maps $W → K$ by $K^W$.
+  There is  a unique morphism of $K$-algebras $\ev_W:K[X_1,\dots,X_n] → K^W$ sending $X_i$ to the restriction of the $i$-th projection $𝔸^n_K → K$ to $W$.
+  An element in the image of this morphism is called a \emph{polynomial function}.
+  \begin{enumerate}
+    \item Confirm that the kernel of $\ev_W$ is given by the vanishing ideal $ℐ(W)$ of $W$.
+    \item Deduce that $\ev_W$ is injective only if $W=𝔸^n_K$.
+    \item Show that $\ev_{𝔸^n_K}$ is injective only if $K$ is infinite.
+    \item Does the converse hold?
   \end{enumerate}
 \end{exercise}
 
