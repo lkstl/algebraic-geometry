@@ -22,7 +22,7 @@
   f(a) ≤_B b \quad\Longleftrightarrow\quad a ≤_A g(b)
   $$
   \begin{enumerate}
-    \item Let $X$, $Y$ be sets and $⊥ ⊆ X × Y$ a relation from $X$ to $Y$.
+    \item Let $X$, $Y$ be sets and $R ⊆ X × Y$ a relation from $X$ to $Y$.
       Prove that the following maps form a Galois connection between the power sets of $X$ and $Y$.
       \begin{align*}
         𝒱_R : (𝒫(X),⊇) &\leftrightarrows (𝒫(Y),⊆) : ℐ_R\\
@@ -107,7 +107,7 @@
 
   \begin{enumerate}
     \item Show that meets and joins are unique if they exist.  In case of existence, write $⋁ M$ for the join of $M$ and $⋀ M$ for its meet.
-    \item Show that the following are equivalent for a lattice $A$:
+    \item Show that the following are equivalent for a poset $A$:
       \begin{enumerate}
         \item $A$ is complete.
         \item Every subset of $A$ has a meet.
@@ -226,8 +226,7 @@
     \item Let $K$ be a field.
       Show that the closure operator $𝒱∘ℐ$ on the power set of $𝔸^n_K$ is topological and that its closed sets are the affine varieties.
     \item More generally, let $R$ be a commutative ring.
-      Find a Galois connection between the power set of $R$ and the power set of its spectrum whose associated closure operator is topological.
-      Show that it induces the Zariski topology.
+      Find a Galois connection between the power set of $R$ and the power set of its spectrum such that the associated closure operator is topological and induces the Zariski topology on $\Spec R$.
     \item In the case that $R=K[x_1,\dots,x_n]$ for a field $K$, find a map $𝔸^n_K → \Spec R$ which is a subspace inclusion with respect to the Zariski topologies.
   \end{enumerate}
 \end{exercise}
