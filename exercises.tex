@@ -278,5 +278,39 @@
   \end{enumerate}
 \end{exercise}
 
+\begin{exercise}[Prime ideals and irreducible varieties]
+  \begin{enumerate}
+    \item Let $R$ be a ring and $𝖕⊆R$ an ideal.
+      Show that the following conditions are equivalent
+      \begin{enumerate}
+        \item Given finitely many ring elements $x_1,\dots,x_n ∉ 𝖕$, we have $∏_{i=1}^n x_i∉𝖕$.
+        \item Given finitely many ideals $𝖆_1,\dots,𝖆_n ⊈ 𝖕$, we have $∏_{i=1}^n 𝖆_i⊈𝖕$.
+        \item Given finitely many ideals $𝖆_1,\dots,𝖆_n ≠ 𝖕$, we have $∏_{i=1}^n 𝖆_i ≠ 𝖕$.
+        \item Given finitely many ideals $𝖆_1,\dots,𝖆_n ⊈ 𝖕$, we have $⋂_{i=1}^n 𝖆_i⊈𝖕$.
+        \item Given finitely many ideals $𝖆_1,\dots,𝖆_n ≠ 𝖕$, we have $⋂_{i=1}^n 𝖆_i ≠ 𝖕$.
+      \end{enumerate}
+    \item Let $K$ be an algebraically closed field.
+      Show that the Galois correspondence 
+      \begin{equation*}
+        \begin{tikzcd}
+          (\Rad(K[X_1,\dots,X_n]),⊇)
+          \arrow[r,yshift=-2.5,"𝒱"']
+          & (\{\text{closed subsets of }𝔸^n_K\},⊆)
+          \arrow[l,yshift=2.5,"ℐ"',"\sim" yshift=0.5pt]
+        \end{tikzcd}
+      \end{equation*}
+      descends to a Galois correspondence
+      \begin{equation*}
+        \begin{tikzcd}
+          (\Spec(K[X_1,\dots,X_n]),⊇)
+          \arrow[r,yshift=-2.5,"𝒱"']
+          & (\{\text{irreducible closed subsets in }𝔸^n_K\},⊆)
+          \arrow[l,yshift=2.5,"ℐ"',"\sim" yshift=0.5pt]
+        \end{tikzcd}.
+      \end{equation*}
+    \item Conclude that $𝔸^n_K$ is irreducible and connected for an algebraically closed field $K$.
+  \end{enumerate}
+\end{exercise}
+
 \printbibliography
 \end{document}
