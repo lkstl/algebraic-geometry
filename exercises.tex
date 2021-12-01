@@ -312,5 +312,46 @@
   \end{enumerate}
 \end{exercise}
 
+\begin{exercise}[The fundamental Galois correspondences of algebraic geometry]
+  Let $R$ be a commutative ring.
+  Consider the relation $\{(f,𝖕)\mid [f] = 0 ∈ R/𝖕\}⊆R×\Spec R$ and its induced Galois connection
+  \begin{equation*}
+    \begin{tikzcd}
+      (𝒫(R),⊇)
+      \arrow[r,yshift=-2.5,"𝒱"']
+      & (𝒫(\Spec(R)),⊆)
+      \arrow[l,yshift=2.5,"ℐ"']
+    \end{tikzcd}
+  \end{equation*}
+  which induces the Zariski topology on $\Spec(R)$ (cf.~Exercise 10).
+  Show that this Galois connection descends to the following Galois correspondences:
+  \begin{enumerate}
+    \item $
+        \begin{tikzcd}
+          (\Rad(R),⊇)
+          \arrow[r,yshift=-2.5]
+          & (\{\text{closed subsets of }\Spec(R)\},⊆)
+          \arrow[l,yshift=2.5,"\sim" yshift=0.5pt]
+        \end{tikzcd}
+        $
+    \item $
+        \begin{tikzcd}
+          (\Spec(R),⊇)
+          \arrow[r,yshift=-2.5]
+          & (\{\text{irreducible closed subsets of }\Spec(R)\},⊆)
+          \arrow[l,yshift=2.5,"\sim" yshift=0.5pt]
+        \end{tikzcd}
+        $
+    \item $
+        \begin{tikzcd}
+          (\Specm(R),⊇)
+          \arrow[r,yshift=-2.5]
+          & (\{\text{closed points of }\Spec(R)\},⊆),
+          \arrow[l,yshift=2.5,"\sim" yshift=0.5pt]
+        \end{tikzcd}
+        $
+  \end{enumerate}
+\end{exercise}
+
 \printbibliography
 \end{document}
