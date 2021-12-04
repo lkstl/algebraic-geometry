@@ -256,58 +256,39 @@
   Let $X$ be a topological space.
   \begin{enumerate}
     \item $X$ is \emph{connected} if for any finite disjoint decomposition $⨆_{i=1}^nZ_i$ into closed subsets $Z_i⊆X$ there is an $i$ with $X=Z_i$.
-      A subspace $Y⊆X$ which is maximal with respect to inclusion among all connected subspaces of $X$ is called a \emph{connected component} of $X$.
       Prove:
       \begin{enumerate}
-        \item A subspace of $X$ is connected if and only if its closure is.
+        \item The empty space $∅$ is not connected.
+        \item The one-point space $𝟙$ is connected.
+        \item The image of a connected space under a continuous function is connected.
+        \item The closure of a connected subspace is connected.
+        \item The union of connected subspaces of $X$ is connected if they have pairwise nonempty intersection.
+      \end{enumerate}
+      A subspace $Y⊆X$ which is maximal with respect to inclusion among all connected subspaces of $X$ is called a \emph{connected component} of $X$.
+      Prove:
+      \begin{enumerate}[start=6]
         \item Every connected subspace of $X$ is contained in a unique connected component.
         \item $X$ is the disjoint union of its connected components.
       \end{enumerate}
     \item $X$ is \emph{irreducible} if for any finite decomposition $⋃_{i=1}^nZ_i$ into closed subsets $Z_i⊆X$ there is an $i$ with $X=Z_i$.
-      A subspace $Y⊆X$ which is maximal with respect to inclusion among all irreducible subspaces of $X$ is called an \emph{irreducible component} of $X$.
+      Prove:
       \begin{enumerate}
-        \item A subspace of $X$ is irreducible if and only if its closure is.
-        \item Every irreducible subspace of $X$ is contained in a unique irreducible component.
+        \item The empty space $∅$ is not irreducible.
+        \item The one-point space $𝟙$ is irreducible.
+        \item The image of an irreducible space under a continuous function is irreducible.
+        \item The closure of an irreducible subspace is irreducible.
+        \item The union of a nonempty chain of irreducible subspaces of $X$ is irreducible.
+      \end{enumerate}
+      A subspace $Y⊆X$ which is maximal with respect to inclusion among all irreducible subspaces of $X$ is called an \emph{irreducible component} of $X$.
+      Prove:
+      \begin{enumerate}[start=6]
+        \item Every irreducible subspace of $X$ is contained in an irreducible component. {\tiny Zorn's lemma.}
         \item $X$ is the union of its irreducible components.
       \end{enumerate}
     \item Show that an irreducible space is connected.
-    \item Show that the empty space is neither connected nor irreducible.
-    \item Show that $ℝ^n$ is connected but not irreducible in the Euclidean topology.
-    \item Show that the one-point space $∗$ is irreducible.
-  \end{enumerate}
-\end{exercise}
-
-\begin{exercise}[Prime ideals and irreducible varieties]
-  \begin{enumerate}
-    \item Let $R$ be a ring and $𝖕⊆R$ an ideal.
-      Show that the following conditions are equivalent
-      \begin{enumerate}
-        \item Given finitely many ring elements $x_1,\dots,x_n ∉ 𝖕$, we have $∏_{i=1}^n x_i∉𝖕$.
-        \item Given finitely many ideals $𝖆_1,\dots,𝖆_n ⊈ 𝖕$, we have $∏_{i=1}^n 𝖆_i⊈𝖕$.
-        \item Given finitely many ideals $𝖆_1,\dots,𝖆_n ≠ 𝖕$, we have $∏_{i=1}^n 𝖆_i ≠ 𝖕$.
-        \item Given finitely many ideals $𝖆_1,\dots,𝖆_n ⊈ 𝖕$, we have $⋂_{i=1}^n 𝖆_i⊈𝖕$.
-        \item Given finitely many ideals $𝖆_1,\dots,𝖆_n ≠ 𝖕$, we have $⋂_{i=1}^n 𝖆_i ≠ 𝖕$.
-      \end{enumerate}
-    \item Let $K$ be an algebraically closed field.
-      Show that the Galois correspondence 
-      \begin{equation*}
-        \begin{tikzcd}
-          (\Rad(K[X_1,\dots,X_n]),⊇)
-          \arrow[r,yshift=-2.5,"𝒱"']
-          & (\{\text{closed subsets of }𝔸^n_K\},⊆)
-          \arrow[l,yshift=2.5,"ℐ"',"\sim" yshift=0.5pt]
-        \end{tikzcd}
-      \end{equation*}
-      descends to a Galois correspondence
-      \begin{equation*}
-        \begin{tikzcd}
-          (\Spec(K[X_1,\dots,X_n]),⊇)
-          \arrow[r,yshift=-2.5,"𝒱"']
-          & (\{\text{irreducible closed subsets in }𝔸^n_K\},⊆)
-          \arrow[l,yshift=2.5,"ℐ"',"\sim" yshift=0.5pt]
-        \end{tikzcd}.
-      \end{equation*}
-    \item Conclude that $𝔸^n_K$ is irreducible and connected for an algebraically closed field $K$.
+    \item Show that $ℝ^n$ is connected but not irreducible in the Euclidean topology for $n≥1$.
+    \item Show that $𝔸_K^n$ is irreducible in the Zariski topology if and only if the field $K$ is infinite.
+    \item Show that $\Spec R$ is irreducible if and only if $R$ is an integral domain. {\tiny Use the next exercise.}
   \end{enumerate}
 \end{exercise}
 
@@ -329,7 +310,7 @@
         \begin{tikzcd}
           (\Rad(R),⊇)
           \arrow[r,yshift=-2.5]
-          & (\{\text{closed subsets of }\Spec(R)\},⊆),
+          & (\{\text{closed subsets of }\Spec(R)\},⊆)
           \arrow[l,yshift=2.5,"\sim" yshift=0.5pt]
         \end{tikzcd}
         $
@@ -337,7 +318,7 @@
         \begin{tikzcd}
           (\Spec(R),⊇)
           \arrow[r,yshift=-2.5]
-          & (\{\text{irreducible closed subsets of }\Spec(R)\},⊆),
+          & (\{\text{irreducible closed subsets of }\Spec(R)\},⊆)
           \arrow[l,yshift=2.5,"\sim" yshift=0.5pt]
         \end{tikzcd}
         $
@@ -345,12 +326,17 @@
         \begin{tikzcd}
           (\Specm(R),⊇)
           \arrow[r,yshift=-2.5]
-          & (\{\text{closed points of }\Spec(R)\},⊆),
+          & (\{\text{closed points of }\Spec(R)\},⊆)
           \arrow[l,yshift=2.5,"\sim" yshift=0.5pt]
         \end{tikzcd}
         $
   \end{enumerate}
-        where $\Specm(R)$ denotes the \emph{maximal spectrum} of $R$, the set of its maximal ideals.
+  Conclude, that each irreducible closed subspace $Y$ of a spectrum has a \emph{generic point}, that is, there is a $y∈Y$ such that $\overline{\{y\}} = Y$.
+\end{exercise}
+
+\begin{exercise}[Spectra see more than classical varieties] 
+  Let $K$ be a field and consider the vanishing set $Z\coloneqq 𝒱(X^2+1)$.
+  Describe $Z$ as a subset of $𝔸^1_K$ and as a subset of $\Spec(K[X])$ in the case $K=ℚ,ℝ,ℂ$.
 \end{exercise}
 
 \printbibliography
