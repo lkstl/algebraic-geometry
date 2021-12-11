@@ -14,7 +14,7 @@
 \RequirePackage{mathtools}
 \RequirePackage{multicol}
 \RequirePackage{tikz-cd}
-\RequirePackage{biblatex}
+%\RequirePackage{biblatex}
 \RequirePackage{hyperref}
 
 \geometry{top=2.5cm}
