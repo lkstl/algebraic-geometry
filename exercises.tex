@@ -376,14 +376,20 @@
 \end{exercise}
 
 \begin{exercise}[Monomial ideals and their dimension]
-  Let $K$ be a field and $𝖆⊆K[X_1,\dots,X_n]$ a monomial ideal.
+  Let $K$ be a field and $𝖆⊆K[X_1,\dots,X_n]$ an ideal.
+  Recall that $𝖆$ is a \emph{monomial ideal} if it admits a generating set consisting of monomials.
   \begin{enumerate}
-    \item Compute the generators of $\sqrt{𝖆}$.
-    \item Conclude that $𝒱(𝖆)$ is a union of linear subspaces of $𝔸^n_K$.
-    \item Let $S$ be the smallest set of variables such that $(S)⊇𝖆$.
+    \item Show that $𝖆$ is monomial if and only if for each finite family of monomials $f_1,\dots,f_n$ with $f_1 + \dots + f_n ∈ 𝖆$, we have $f_i ∈ 𝖆$ for all $i$.
+    \item Show that the radical of a monomial ideal is monomial.
+    \item A monomial ideal is \emph{square-free} if it admits a generating set consisting of \emph{square-free monomials}, i.e. monomials which are not divisible by the square of any variable.
+      Show that a monomial ideal is square-free if and only if it is radical.
+    \item Given a monomial $f=X_{i_1}^{e_1}\cdots X_{i_m}^{e_m}$ with $e_j > 0$, define $\sqrt{f} \coloneqq X_{i_1}\cdots X_{i_m}$.
+      Show that $$\sqrt{(f_1,\dots,f_r)} = (\sqrt{f_1},\dots,\sqrt{f_r}).$$
+    \item Conclude that the vanishing set of a monomial ideal is a union of linear subspaces.
+    \item Suppose $𝖆$ is a monomial ideal and denote by $S$ the smallest set of variables such that $(S)⊇𝖆$.
       Show that $\dim 𝖆 = n - |S|$.
-    \item Let $V⊆𝔸^n_K$ be a variety such that $\mathrm{in}_\prec(ℐ(V))=𝖆$.
-      Can you find a geometric interpetation of the formula for the dimension above?
+    \item Now let $V⊆𝔸^n_K$ be a variety such that $\mathrm{in}_\prec(ℐ(V))=𝖆$.
+      Can you find a geometric interpetation of the dimension formula above?
   \end{enumerate}
 \end{exercise}
 
