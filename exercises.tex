@@ -376,25 +376,25 @@
 \end{exercise}
 
 \begin{exercise}[Monomial ideals and their dimension]
-  Let $K$ be a field and $𝖆⊆K[X_1,\dots,X_n]$ an ideal.
-  Recall that $𝖆$ is a \emph{monomial ideal} if it admits a generating set consisting of monomials.
+  Let $K$ be a field.
+  Recall that a \emph{monomial} is a product of variables and an ideal $𝖆 ⊆ K[X_1,\dots,X_n]$ is a \emph{monomial ideal} if it admits a generating set consisting of monomials.
   \begin{enumerate}
-    \item Show that $𝖆$ is monomial if and only if for each finite family of monomials $f_1,\dots,f_n$ with $f_1 + \dots + f_n ∈ 𝖆$, we have $f_i ∈ 𝖆$ for all $i$.
+    \item Show that $𝖆$ is monomial if and only if for each linear combination $c_1f_1 + \dots + c_rf_r ∈ 𝖆$ of monomials $f_1,\dots,f_s$ with $c_j ∈ K^×$, we have $f_j ∈ 𝖆$ for all $j$.
     \item Show that the radical of a monomial ideal is monomial.
-    \item A monomial ideal is \emph{square-free} if it admits a generating set consisting of \emph{square-free monomials}, i.e. monomials which are not divisible by the square of any variable.
-      Show that a monomial ideal is square-free if and only if it is radical.
-    \item Given a monomial $f=X_{i_1}^{e_1}\cdots X_{i_m}^{e_m}$ with $e_j > 0$, define $\sqrt{f} \coloneqq X_{i_1}\cdots X_{i_m}$.
-      Show that $$\sqrt{(f_1,\dots,f_r)} = (\sqrt{f_1},\dots,\sqrt{f_r}).$$
-    \item Conclude that the vanishing set of a monomial ideal is a union of linear subspaces.
+    \item Given a monomial $m=X_{i_1}^{e_1}\cdots X_{i_m}^{e_m}$ with $e_j > 0$, define $\sqrt{m} \coloneqq X_{i_1}\cdots X_{i_m}$.
+      We call $m$ \emph{square-free} if $\sqrt{m}=m$.
+      Show that a monomial ideal admits a generated set consisting of square-free monomials if and only if it is radical.
+    \item Given monomials $m_1,\dots,m_r$, show that $\sqrt{(m_1,\dots,m_r)} = (\sqrt{m_1},\dots,\sqrt{m_r})$ and conclude that the vanishing set of a monomial ideal is a union of linear subspaces.
     \item Suppose $𝖆$ is a monomial ideal and denote by $S$ the smallest set of variables such that $(S)⊇𝖆$.
       Show that $\dim 𝖆 = n - |S|$.
-    \item Now let $V⊆𝔸^n_K$ be a variety such that $\mathrm{in}_\prec(ℐ(V))=𝖆$.
-      Can you find a geometric interpetation of the dimension formula above?
+%    \item Now let $V⊆𝔸^n_K$ be a variety such that $\mathrm{in}_\prec(ℐ(V))=𝖆$.
+%      Can you find a geometric interpetation of the dimension formula above?
   \end{enumerate}
 \end{exercise}
 
 \begin{exercise}[Homogeneous ideals]
   Let $K$ be a field.
+  Recall that a \emph{homogeneous element of degree $d$} is a linear combination of monomials of degree $d$ over $K$ and an ideal $𝖆⊆K[X_0,\dots,X_n]$ is a \emph{homogeneous ideal} if it admits a generating set consisting of homogeneous elements (not necessarily of the same degree).
   \begin{enumerate}
     \item Assume that $K$ is infinite.
       Show that $f ∈ K[X_0,\dots,X_n]$ is homogeneous of degree $d$ if and only if $f(λa_0,\dots,λa_n) = λ^d f(a_0,\dots,a_n)$ for all $a_0,\dots,a_n ∈ K$ and $λ ∈ K^×$.
