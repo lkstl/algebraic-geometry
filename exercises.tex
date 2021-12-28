@@ -412,32 +412,4 @@
   \end{enumerate}
 \end{exercise}
 
-\begin{exercise}[The variety of nilpotent matrices]
-  Let $K$ be a field and identify the space $\Mat_n(K)$ of $n × n$ matrices with affine space $𝔸^{n^2}_K$.
-  Denote its coordinate ring by $R_n \coloneqq K[X_{i,j}]_{i,j ∈ \{1,\dots,n\}}$.
-  %and write $\Nil_n(K)$ for the set of nilpotent $n × n$ matrices.
-  Prove:
-  \begin{enumerate}
-    \item The characteristic polynomial of a matrix $A ∈ \Mat_n(R)$ over any commutative ring $R$ can be written as
-      $$
-      χ_A(t) \coloneqq \det(t⋅𝟙 - A) = \sum_{i = 0}^n (-1)^{n-i}s_{n-i}(A)t^i ∈ R[t]
-      $$
-      where $s_{n-i}(A) \coloneqq \tr(⋀^iA)$ is the sum of all principal $i$-minors of $A$.
-    \item For $G$ the \emph{generic $n × n$ matrix} over $K$
-      $$
-      G \coloneqq
-      \begin{bmatrix}
-        X_{1,1} & \cdots & X_{1,n}\\[0.3em]
-        \vdots & \ddots & \vdots\\[0.3em]
-        X_{n,1} & \cdots & X_{n,n}
-      \end{bmatrix}
-      ∈ \Mat_n(R_n),
-      $$
-      the ideal $(s_1(G),\dots,s_n(G))⊆R_n$ is a prime ideal.
-    \item The set $\Nil_n(K)⊆\Mat_n(K)$ of nilpotent $n × n$ matrices is an irreducible variety.
-    \item The dimension of $\Nil_n(K)$ is $n^2 - n$.
-    \item The degree of $\Nil_n(K)$ is $n!$.
-  \end{enumerate}
-\end{exercise}
-
 \end{document}
