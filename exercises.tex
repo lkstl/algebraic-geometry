@@ -293,7 +293,7 @@
   \end{enumerate}
 \end{exercise}
 
-\begin{exercise}[The fundamental Galois correspondences of algebraic geometry]
+\begin{exercise}[The fundamental Galois correspondences of modern algebraic geometry]
   Let $R$ be a commutative ring.
   Consider the relation $\{(f,𝖕)\mid [f] = 0 ∈ R/𝖕\}⊆R×\Spec R$ and its induced Galois connection
   \begin{equation*}
@@ -308,29 +308,29 @@
   Show that this Galois connection descends to the following Galois correspondences:
   \begin{enumerate}
     \item $
-        \begin{tikzcd}
-          (\Rad(R),⊇)
-          \arrow[r,yshift=-2.5]
-          & (\{\text{closed subsets of }\Spec(R)\},⊆)
-          \arrow[l,yshift=2.5,"\sim" yshift=0.5pt]
-        \end{tikzcd}
-        $
+      \begin{tikzcd}[cramped]
+        (\Rad(R),⊇)
+        \arrow[r,yshift=-2.5]
+        & (\{\text{closed subsets of }\Spec(R)\},⊆)
+        \arrow[l,yshift=2.5,"\sim" yshift=0.5pt]
+      \end{tikzcd}
+      $
     \item $
-        \begin{tikzcd}
-          (\Spec(R),⊇)
-          \arrow[r,yshift=-2.5]
-          & (\{\text{irreducible closed subsets of }\Spec(R)\},⊆)
-          \arrow[l,yshift=2.5,"\sim" yshift=0.5pt]
-        \end{tikzcd}
-        $
+      \begin{tikzcd}[cramped]
+        (\Spec(R),⊇)
+        \arrow[r,yshift=-2.5]
+        & (\{\text{irreducible closed subsets of }\Spec(R)\},⊆)
+        \arrow[l,yshift=2.5,"\sim" yshift=0.5pt]
+      \end{tikzcd}
+      $
     \item $
-        \begin{tikzcd}
-          (\Specm(R),⊇)
-          \arrow[r,yshift=-2.5]
-          & (\{\text{closed points of }\Spec(R)\},⊆)
-          \arrow[l,yshift=2.5,"\sim" yshift=0.5pt]
-        \end{tikzcd}
-        $
+      \begin{tikzcd}[cramped]
+        (\Specm(R),⊇)
+        \arrow[r,yshift=-2.5]
+        & (\{\text{closed points of }\Spec(R)\},⊆)
+        \arrow[l,yshift=2.5,"\sim" yshift=0.5pt]
+      \end{tikzcd}
+      $
   \end{enumerate}
   Conclude, that each irreducible closed subspace $Y$ of a spectrum has a \emph{generic point}, that is, there is a $y∈Y$ such that $\overline{\{y\}} = Y$.
 \end{exercise}
@@ -409,6 +409,34 @@
     \item Show that intersections, sums, products and radicals of homogeneous ideals are again homogeneous.
     \item Show that a homogeneous ideal $𝖕⊆K[X_0,\dots,X_n]$ is prime if and only if for any finite family $(f_i)_{i∈\{1,\dots,r\}}$ of homogeneous elements $f_i$ with $∏_{i=1}^r f_i ∈ 𝖕$ there exists an $i ∈ \{1,\dots,r\}$ such that $f_i ∈ 𝖕$.
     \item Show that every homogeneous ideal $𝖆 ⊊ K[X_0,\dots,X_n]$ is contained in the \emph{irrelevant ideal}, the homogeneous ideal $(X_0,\dots,X_n)$.
+  \end{enumerate}
+\end{exercise}
+
+\begin{exercise}[Affine cones]
+  Let $K$ be an infinite field and write $R\coloneqq K[X_0,\dots,X_n]$.
+  Recall that $K$ acts on affine space $𝔸^{n+1}_K$ by scaling, that is, $λ ∈ K$ sends $(a_0,\dots,a_n)$ to $(λa_0,\dots,λa_n)$.
+  A subset $C⊆𝔸^{n+1}_K$ is an \emph{affine cone} if $λ⋅p ∈ C$ for each $λ ∈ K$ whenever $p ∈ C$.
+  \begin{enumerate}
+    \item Denote the set of homogeneous ideals of $R$ which are not equal to the irrelevant ideal by $\Idl_+(R)$ and write $π:𝔸^{n+1}_K∖\{0\} → ℙ^n_K$ for the canonical projection.
+      Show that there is a commutative triangle of Galois connections as follows:
+      % https://q.uiver.app/?q=WzAsMyxbMCwxLCIoXFxJZGxfKyhSKSziiocpIl0sWzIsMCwiKFxce1xcdGV4dHtzdWJzZXRzIG9mIH3ihJlebl9LXFx9LOKKhikiXSxbMiwyLCIoXFx7XFx0ZXh0e25vbnRyaXZpYWwgYWZmaW5lIGNvbmVzIGluIH3wnZS4XntuKzF9X0tcXH0s4oqGKSJdLFswLDIsIvCdkrEiLDIseyJvZmZzZXQiOjJ9XSxbMSwyLCLPgF4qIiwyLHsib2Zmc2V0IjoyfV0sWzAsMSwi8J2SsV8rIiwyLHsib2Zmc2V0IjoyfV0sWzEsMCwi4oSQXysiLDIseyJvZmZzZXQiOjJ9XSxbMiwxLCLPgF8hIiwyLHsib2Zmc2V0IjoyfV0sWzIsMCwi4oSQIiwyLHsib2Zmc2V0IjoyfV0sWzQsNywiIiwwLHsibGV2ZWwiOjEsInN0eWxlIjp7Im5hbWUiOiJhZGp1bmN0aW9uIn19XSxbNiw1LCIiLDEseyJsZXZlbCI6MSwic3R5bGUiOnsibmFtZSI6ImFkanVuY3Rpb24ifX1dLFs4LDMsIiIsMCx7ImxldmVsIjoxLCJzdHlsZSI6eyJuYW1lIjoiYWRqdW5jdGlvbiJ9fV1d
+      \[\begin{tikzcd}
+        && {(\{\text{subsets of }ℙ^n_K\},⊆)} \\
+        {(\Idl_+(R),⊇)} \\
+        && {(\{\text{nontrivial affine cones in }𝔸^{n+1}_K\},⊆)}
+        \arrow[""{name=0, anchor=center, inner sep=0}, "{𝒱}"', shift right=2, from=2-1, to=3-3]
+        \arrow[""{name=1, anchor=center, inner sep=0}, "{C}"', shift right=2, from=1-3, to=3-3]
+        \arrow[""{name=2, anchor=center, inner sep=0}, shift right=2, from=2-1, to=1-3]
+        \arrow[""{name=3, anchor=center, inner sep=0}, shift right=2, from=1-3, to=2-1]
+        \arrow[""{name=4, anchor=center, inner sep=0}, "{\widetilde{∃}_π}"', shift right=2, from=3-3, to=1-3]
+        \arrow[""{name=5, anchor=center, inner sep=0}, "{ℐ}"', shift right=2, from=3-3, to=2-1]
+        \arrow["\dashv"{anchor=center}, draw=none, from=1, to=4]
+        \arrow["\dashv"{anchor=center, rotate=-77}, draw=none, from=3, to=2]
+        \arrow["\dashv"{anchor=center, rotate=-103}, draw=none, from=5, to=0]
+      \end{tikzcd}\]
+      Here, $C(T)$ is the affine cone $π^{-1}(T)∪\{0\}$ associated to a subset $T⊆ℙ^n_K$ of projective space, $\widetilde{∃}_π$ sends a subset $X ⊆ 𝔸^{n+1}_K$ to $π(X∖\{0\})$.
+    \item Show that the above triangle of Galois connections descends to a triangle of Galois correspondences between the set of homogeneous \textbf{radical} ideals which are not equal to the irrelevant ideal, the set of \textbf{closed} sets of $ℙ^n_K$, and the set of nontrivial \textbf{closed} affine cones in $𝔸^{n+1}_K$.
+    \item Show that the above triangle of Galois correspondences descends to a triangle of Galois correspondences between the set of homogeneous \textbf{prime} ideals which are not equal to the irrelevant ideal, the set of \textbf{irreducible closed} sets of $ℙ^n_K$, and the set of nontrivial \textbf{irreducible closed} affine cones in $𝔸^{n+1}_K$.
   \end{enumerate}
 \end{exercise}
 
