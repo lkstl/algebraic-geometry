@@ -412,6 +412,23 @@
   \end{enumerate}
 \end{exercise}
 
+\begin{exercise}[Projective space as a quotient]
+  \begin{enumerate}
+    \item Recall the projection map $π:𝔸^{n+1}_K∖\{0\} → ℙ^n_K$, sending a point $p=(a_0,\dots,a_n)$ to the line $[a_0:\ldots:a_n]$ through $p$ and the origin.
+      Show that $π$ is continuous.
+    \item Consider the action of $K^×$ on $𝔸^{n+1}_K$ by scaling, that is, $λ∈K^×$ sends $(a_0,\dots,a_n)$ to $(λa_0,\dots,λa_n)$.
+      Denote the corresponding quotient projection $𝔸^{n+1}_K∖\{0\} → (𝔸^{n+1}_K∖\{0\})/K^×$ by $ν$ and equip $(𝔸^{n+1}_K∖\{0\})$ with the quotient topology.
+      Find a homeomorphism making the following triangle commute:
+      \[\begin{tikzcd}[column sep=5em]
+        & {𝔸^{n+1}_K∖\{0\}} \\
+        {ℙ^n_K} && {(𝔸^{n+1}_K∖\{0\})/K^×}
+        \arrow["{≃}", dashed, from=2-1, to=2-3]
+        \arrow["ν", from=1-2, to=2-3]
+        \arrow["{π}"', from=1-2, to=2-1]
+      \end{tikzcd}\]
+  \end{enumerate}
+\end{exercise}
+
 \begin{exercise}[Affine cones]
   Let $K$ be an infinite field and write $R\coloneqq K[X_0,\dots,X_n]$.
   Recall that $K$ acts on affine space $𝔸^{n+1}_K$ by scaling, that is, $λ ∈ K$ sends $(a_0,\dots,a_n)$ to $(λa_0,\dots,λa_n)$.
@@ -441,8 +458,16 @@
 \end{exercise}
 
 \begin{exercise}[Homogenization and dehomogenization]
-  Consider the polynomial ring $R[X_0,\dots,X_n]$ over a commutative ring $R$.
-  Show that for each $d ≥ 0$ and $i ∈ \{0,\dots,n\}$ homogenization and dehomogenization constitute inverse $R$-linear maps between the $R$-module $R[X_0,\dots,X_n]_d$ of $(n+1)$-variate homogeneous polynomials of degree $d$ and the $R$-module $R[X_0,\dots,\widehat{X_i},\dots,X_n]$ of $n$-variate polynomials of degree $≤d$.
+  Let $K$ be a field.
+  Denote the vector space of $(n+1)$-variate polynomials of degree at most $d$ by $K[X_0,\dots,X_n]_{≤d}\coloneqq ⊕_{i ≤ d}K[X_0,\dots,X_n]_d$.
+  For each $i ∈ \{0,\dots,n\}$ and $d ≥ 0$ there is a map
+  \begin{align*}
+    Φ_i^{(d)} : K[X_0,\dots,X_n]_d & \longrightarrow K[X_0,\dots,\widehat{X_i},\dots,X_n]_{≤d}\\
+    f & \longmapsto f(X_0,\dots,1,\dots,X_n)
+  \end{align*}
+  called \emph{dehomogenization with respect to $X_i$}.
+    Show that each $Φ^{(d)}_i$ is $K$-linear and has a $K$-linear inverse $Ψ_i^{(d)}$ called \emph{homogenization with respect to $X_i$}.
+      By identifying $K[X_0,\dots,X_n]$ with a subset of $K[X_0,\dots,X_n][X_i^{-1}]$ this inverse can be written as $Ψ^{(d)}_i(f)=X_i^d ⋅ f(\tfrac{X_0}{X_i},\dots,\tfrac{X_n}{X_i})$.
 \end{exercise}
 
 %\begin{exercise}[The variety of nilpotent matrices]
