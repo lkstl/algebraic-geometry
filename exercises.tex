@@ -416,20 +416,18 @@
   \begin{enumerate}
     \item Let $X=⋃_{i ∈ I}X_i$ be a decomposition of a set $X$ into subsets, each endowed with a topology $τ_i$, and write $X_{ij}\coloneqq X_i ∩ X_j$ and%
       \footnote{Given a topological space $X$ with topology $τ⊆𝒫(X)$ and a subset $Y⊆X$, we denote the subspace topology on $Y$ by $τ|_Y=\{U∩Y \mid U ∈ τ\}$.}
-        $τ_i|_{ij} \coloneqq τ_i|_{X_{ij}}$.
-      Show that there exists a unique topology $τ$ on $X$ with $τ|_i \coloneqq τ|_{X_i} = τ_i$ if and only if the following two conditions are satisfied for all $i,j ∈ I$.
-      \begin{enumerate}
-        \item $X_{ij}$ is open in $X_i$ and in $X_j$.
-        \item $τ_i|_{ij} = τ_j|_{ij}$.
-      \end{enumerate}
+      $τ_i|_{ij} \coloneqq τ_i|_{X_{ij}}$.
+      Show that there exists a unique topology $τ$ on $X$ with $τ|_i \coloneqq τ|_{X_i} = τ_i$ if and only if $X_{ij}$ is open in $X_i$ and in $X_j$ and $τ_i|_{ij} = τ_j|_{ij}$ for all $i,j ∈ I$.
   \end{enumerate}
-  Recall that the topology on $ℙ^n_K$ was defined by decomposing $ℙ^n_K$ into 
-\end{exercise}
-
-\begin{exercise}[Projective space as a quotient]
-  \begin{enumerate}
-    \item Recall the projection map $π:𝔸^{n+1}_K∖\{0\} → ℙ^n_K$, sending a point $p=(a_0,\dots,a_n)$ to the line $[a_0:\ldots:a_n]$ through $p$ and the origin.
-      Show that $π$ is continuous.
+  Let $K$ be a field and consider the projective space $ℙ^n_K$, the set of lines through the origin in $𝔸^{n+1}_K$.
+  For any linear form $ℓ ∈ K[X_0,\dots,X_n]_1$ we write $ℋ_ℓ \coloneqq 𝒱_+(ℓ)$ for the hyperplane in $ℙ^n_K$ defined by $ℓ$ and denote its complement by $U_ℓ \coloneqq ℙ^n_K ∖ ℋ_ℓ$.
+  \begin{enumerate}[start=2]
+    \item Find a bijection $𝔸^n_K ≅ U_ℓ$ for each $ℓ ∈ K[X_0,\dots,X_n]_1$.
+      This allows us to endow each $U_ℓ$ with a topology by transfering the Zariski topology along this bijection.
+    \item Show that $(U_ℓ)_{ℓ ∈ K[X_0,\dots,X_n]_1}$ is a decomposition of $ℙ^n_K$ satisfying the conditions of (a), thus defining a topology on $ℙ^n_K$.
+    \item Let $U_i\coloneqq U_{X_i}$ be the standard open set on $ℙ^n_K$ defined by the coordinate linear forms $X_i ∈ K[X_0,\dots,X_n]_1$.
+      Show that $(U_i)_{i ∈ \{0,\dots,n\}}$ already covers $ℙ^n_K$ and induces the same topology as in (c).
+    \item Prove that the map $π:𝔸^{n+1}_K∖\{0\} → ℙ^n_K$ sending a point to the line through $p$ and the origin is continuous.
     \item Consider the action of $K^×$ on $𝔸^{n+1}_K$ by scaling, that is, $λ∈K^×$ sends $(a_0,\dots,a_n)$ to $(λa_0,\dots,λa_n)$.
       Denote the corresponding quotient projection $𝔸^{n+1}_K∖\{0\} → (𝔸^{n+1}_K∖\{0\})/K^×$ by $ν$ and equip $(𝔸^{n+1}_K∖\{0\})$ with the quotient topology.
       Find a homeomorphism rendering the following triangle commutative:
