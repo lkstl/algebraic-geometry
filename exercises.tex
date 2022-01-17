@@ -414,20 +414,21 @@
 
 \begin{exercise}[The topology on projective space]
   \begin{enumerate}
-    \item Let $X=⋃_{i ∈ I}X_i$ be a decomposition of a set $X$ into subsets, each endowed with a topology $τ_i$, and write $X_{ij}\coloneqq X_i ∩ X_j$ and%
+    \item Let $X=⋃_{i ∈ I}X_i$ be a decomposition of a set $X$ into subsets, each of which are endowed with a topology $τ_i$.
+      Show that there exists a unique topology $τ$ on $X$ such that $X_i ∈ τ$ and%
       \footnote{Given a topological space $X$ with topology $τ⊆𝒫(X)$ and a subset $Y⊆X$, we denote the subspace topology on $Y$ by $τ|_Y=\{U∩Y \mid U ∈ τ\}$.}
-      $τ_i|_{ij} \coloneqq τ_i|_{X_{ij}}$.
-      Show that there exists a unique topology $τ$ on $X$ with $τ|_i \coloneqq τ|_{X_i} = τ_i$ if and only if $X_{ij}$ is open in $X_i$ and in $X_j$ and $τ_i|_{ij} = τ_j|_{ij}$ for all $i,j ∈ I$.
+      $τ|_{X_i} = τ_i$ for all $i ∈ I$ if and only if for all $i,j ∈ I$
+      \begin{itemize}
+        \item $X_{ij}\coloneqq X_i ∩ X_j$ is in $τ_i$ and $τ_j$,
+        \item $τ_i|_{X_{ij}} = τ_j|_{X_{ij}}$.
+      \end{itemize}
   \end{enumerate}
-  Let $K$ be a field and consider the projective space $ℙ^n_K$, the set of lines through the origin in $𝔸^{n+1}_K$.
-  For any linear form $ℓ ∈ K[X_0,\dots,X_n]_1$ we write $ℋ_ℓ \coloneqq 𝒱_+(ℓ)$ for the hyperplane in $ℙ^n_K$ defined by $ℓ$ and denote its complement by $U_ℓ \coloneqq ℙ^n_K ∖ ℋ_ℓ$.
+  Consider projective space $ℙ^n_K$ over a field $K$, the set of lines through the origin in $𝔸^{n+1}_K$.
+  For an $n$-dimensional coordinate hyperplane $𝒱(X_i) ⊆ 𝔸^{n+1}_K$ we let $U_i ⊆ ℙ^n_K$ denote the subset of all those lines which are linear complements of $𝒱(X_i)$ in $𝔸^{n+1}_K$.
   \begin{enumerate}[start=2]
-    \item Find a bijection $𝔸^n_K ≅ U_ℓ$ for each $ℓ ∈ K[X_0,\dots,X_n]_1$.
-      This allows us to endow each $U_ℓ$ with a topology by transfering the Zariski topology along this bijection.
-    \item Show that $(U_ℓ)_{ℓ ∈ K[X_0,\dots,X_n]_1}$ is a decomposition of $ℙ^n_K$ satisfying the conditions of (a), thus defining a topology on $ℙ^n_K$.
-    \item Let $U_i\coloneqq U_{X_i}$ be the standard open set on $ℙ^n_K$ defined by the coordinate linear forms $X_i ∈ K[X_0,\dots,X_n]_1$.
-      Show that $(U_i)_{i ∈ \{0,\dots,n\}}$ already covers $ℙ^n_K$ and induces the same topology as in (c).
-    \item Prove that the map $π:𝔸^{n+1}_K∖\{0\} → ℙ^n_K$ sending a point to the line through $p$ and the origin is continuous.
+    \item Find a bijection $𝔸^n_K ≅ U_i$ for each $i = \{0,\dots,n\}$, allowing us to endow each $U_i$ with a topology by transferring the Zariski topology.
+    \item Show that $(U_i)_{i ∈ \{0,\dots,n\}}$ is a decomposition of $ℙ^n_K$ satisfying the conditions of (a), thus defining a topology on $ℙ^n_K$.
+    \item Prove that the map $π:𝔸^{n+1}_K∖\{0\} → ℙ^n_K$ sending a point to the line through $p$ and the origin is continuous with respect to the topology defined above.
     \item Consider the action of $K^×$ on $𝔸^{n+1}_K$ by scaling, that is, $λ∈K^×$ sends $(a_0,\dots,a_n)$ to $(λa_0,\dots,λa_n)$.
       Denote the corresponding quotient projection $𝔸^{n+1}_K∖\{0\} → (𝔸^{n+1}_K∖\{0\})/K^×$ by $ν$ and equip $(𝔸^{n+1}_K∖\{0\})$ with the quotient topology.
       Find a homeomorphism rendering the following triangle commutative:
@@ -463,7 +464,7 @@
         \arrow["\dashv"{anchor=center, rotate=-77}, draw=none, from=3, to=2]
         \arrow["\dashv"{anchor=center, rotate=-103}, draw=none, from=5, to=0]
       \end{tikzcd}\]
-      Here, $C(T)$ is the affine cone $π^{-1}(T)∪\{0\}$ associated to a subset $T⊆ℙ^n_K$ of projective space, $\widetilde{∃}_π$ sends a subset $X ⊆ 𝔸^{n+1}_K$ to $π(X∖\{0\})$.
+      Here, $C(T)$ is the affine cone $π^{-1}(T)∪\{0\}$ associated to a subset $T⊆ℙ^n_K$ of projective space and $\widetilde{∃}_π$ sends a subset $X ⊆ 𝔸^{n+1}_K$ to $π(X∖\{0\})$.
     \item Show that the above triangle of Galois connections descends to a triangle of Galois correspondences between the set of homogeneous \textbf{radical} ideals which are not equal to the irrelevant ideal, the set of \textbf{closed} sets of $ℙ^n_K$, and the set of nontrivial \textbf{closed} affine cones in $𝔸^{n+1}_K$.
     \item Show that the above triangle of Galois correspondences descends to a triangle of Galois correspondences between the set of homogeneous \textbf{prime} ideals which are not equal to the irrelevant ideal, the set of \textbf{irreducible closed} sets of $ℙ^n_K$, and the set of nontrivial \textbf{irreducible closed} affine cones in $𝔸^{n+1}_K$.
     \item Was it really necessary to assume that $K$ is infinite?
