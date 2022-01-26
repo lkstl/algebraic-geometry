@@ -392,13 +392,13 @@
   \end{enumerate}
 \end{exercise}
 
-\begin{exercise}[Homogeneous ideals]
+\begin{exercise}[Basic properties of homogeneous ideals]
   Let $K$ be a field.
   Recall that a \emph{homogeneous polynomial of degree $d$} is a linear combination of monomials of degree $d$ over $K$ and an ideal $𝖆⊆K[X_0,\dots,X_n]$ is a \emph{homogeneous ideal} if it admits a generating set consisting of homogeneous elements (not necessarily of the same degree).
   Write $K[X_0,\dots,X_n]_d$ for the linear subspace consisting of homogeneous polynomials of degree $d$.
   \begin{enumerate}
-    \item Assume that $K$ is infinite.
-      Show that $f ∈ K[X_0,\dots,X_n]$ is homogeneous of degree $d$ if and only if $f(λa_0,\dots,λa_n) = λ^d f(a_0,\dots,a_n)$ for all $a_0,\dots,a_n ∈ K$ and $λ ∈ K^×$.
+    \item Show that $f ∈ K[X_0,\dots,X_n]$ is homogeneous of degree $d$ only if $f(λa_0,\dots,λa_n) = λ^d f(a_0,\dots,a_n)$ for all $a_0,\dots,a_n ∈ K$ and $λ ∈ K$.
+      Show that the converse holds if $K$ is an infinite field.
     \item Let $𝖆⊆K[X_0,\dots,X_n]$ be an ideal.
       Show that the following assertions are equivalent.
       \begin{enumerate}
@@ -427,48 +427,7 @@
   For an $n$-dimensional coordinate hyperplane $𝒱(X_i) ⊆ 𝔸^{n+1}_K$ we let $U_i ⊆ ℙ^n_K$ denote the subset of all those lines which are linear complements of $𝒱(X_i)$ in $𝔸^{n+1}_K$.
   \begin{enumerate}[start=2]
     \item Find a bijection $𝔸^n_K ≅ U_i$ for each $i = \{0,\dots,n\}$, allowing us to endow each $U_i$ with a topology by transferring the Zariski topology.
-    \item Show that $(U_i)_{i ∈ \{0,\dots,n\}}$ is a decomposition of $ℙ^n_K$ satisfying the conditions of (a), thus defining a topology on $ℙ^n_K$.
-    \item Prove that the map $π:𝔸^{n+1}_K∖\{0\} → ℙ^n_K$ sending a point to the line through $p$ and the origin is continuous with respect to the topology defined above.
-    \item Consider the action of $K^×$ on $𝔸^{n+1}_K$ by scaling, that is, $λ∈K^×$ sends $(a_0,\dots,a_n)$ to $(λa_0,\dots,λa_n)$.
-      Denote the corresponding quotient projection $𝔸^{n+1}_K∖\{0\} → (𝔸^{n+1}_K∖\{0\})/K^×$ by $ν$ and equip $(𝔸^{n+1}_K∖\{0\})$ with the quotient topology.
-      Find a homeomorphism rendering the following triangle commutative:
-      \[\begin{tikzcd}[column sep=5em]
-        & {𝔸^{n+1}_K∖\{0\}} \\
-        {ℙ^n_K} && {(𝔸^{n+1}_K∖\{0\})/K^×}
-        \arrow["{≃}", dashed, from=2-1, to=2-3]
-        \arrow["ν", from=1-2, to=2-3]
-        \arrow["{π}"', from=1-2, to=2-1]
-      \end{tikzcd}\]
-  \end{enumerate}
-\end{exercise}
-
-\begin{exercise}[Affine cones]
-  Let $K$ be an infinite field and write $R\coloneqq K[X_0,\dots,X_n]$.
-  Recall that $K$ acts on affine space $𝔸^{n+1}_K$ by scaling, that is, $λ ∈ K$ sends $(a_0,\dots,a_n)$ to $(λa_0,\dots,λa_n)$.
-  A subset $C⊆𝔸^{n+1}_K$ is an \emph{affine cone} if $λ⋅p ∈ C$ for each $λ ∈ K$ whenever $p ∈ C$.
-  \begin{enumerate}
-    \item Denote the set of homogeneous ideals of $R$ which are not equal to the irrelevant ideal by $\Idl_+(R)$ and write $π:𝔸^{n+1}_K∖\{0\} → ℙ^n_K$ for the canonical projection.
-      Show that there is a commutative triangle of Galois connections as follows:
-      % https://q.uiver.app/?q=WzAsMyxbMCwxLCIoXFxJZGxfKyhSKSziiocpIl0sWzIsMCwiKFxce1xcdGV4dHtzdWJzZXRzIG9mIH3ihJlebl9LXFx9LOKKhikiXSxbMiwyLCIoXFx7XFx0ZXh0e25vbnRyaXZpYWwgYWZmaW5lIGNvbmVzIGluIH3wnZS4XntuKzF9X0tcXH0s4oqGKSJdLFswLDIsIvCdkrEiLDIseyJvZmZzZXQiOjJ9XSxbMSwyLCLPgF4qIiwyLHsib2Zmc2V0IjoyfV0sWzAsMSwi8J2SsV8rIiwyLHsib2Zmc2V0IjoyfV0sWzEsMCwi4oSQXysiLDIseyJvZmZzZXQiOjJ9XSxbMiwxLCLPgF8hIiwyLHsib2Zmc2V0IjoyfV0sWzIsMCwi4oSQIiwyLHsib2Zmc2V0IjoyfV0sWzQsNywiIiwwLHsibGV2ZWwiOjEsInN0eWxlIjp7Im5hbWUiOiJhZGp1bmN0aW9uIn19XSxbNiw1LCIiLDEseyJsZXZlbCI6MSwic3R5bGUiOnsibmFtZSI6ImFkanVuY3Rpb24ifX1dLFs4LDMsIiIsMCx7ImxldmVsIjoxLCJzdHlsZSI6eyJuYW1lIjoiYWRqdW5jdGlvbiJ9fV1d
-      \[\begin{tikzcd}
-        && {(\{\text{subsets of }ℙ^n_K\},⊆)} \\
-        {(\Idl_+(R),⊇)} \\
-        && {(\{\text{nontrivial affine cones in }𝔸^{n+1}_K\},⊆)}
-        \arrow[""{name=0, anchor=center, inner sep=0}, "{𝒱}"', shift right=2, from=2-1, to=3-3]
-        \arrow[""{name=1, anchor=center, inner sep=0}, "{C}"', shift right=2, from=1-3, to=3-3]
-        \arrow[""{name=2, anchor=center, inner sep=0}, "{𝒱_+}"', shift right=2, from=2-1, to=1-3]
-        \arrow[""{name=3, anchor=center, inner sep=0}, "{ℐ_+}"', shift right=2, from=1-3, to=2-1]
-        \arrow[""{name=4, anchor=center, inner sep=0}, "{\widetilde{∃}_π}"', shift right=2, from=3-3, to=1-3]
-        \arrow[""{name=5, anchor=center, inner sep=0}, "{ℐ}"', shift right=2, from=3-3, to=2-1]
-        \arrow["\dashv"{anchor=center}, draw=none, from=1, to=4]
-        \arrow["\dashv"{anchor=center, rotate=-77}, draw=none, from=3, to=2]
-        \arrow["\dashv"{anchor=center, rotate=-103}, draw=none, from=5, to=0]
-      \end{tikzcd}\]
-      Here, $C(T)$ is the affine cone $π^{-1}(T)∪\{0\}$ associated to a subset $T⊆ℙ^n_K$ of projective space and $\widetilde{∃}_π$ sends a subset $X ⊆ 𝔸^{n+1}_K$ to $π(X∖\{0\})$.
-    \item Show that the above triangle of Galois connections descends to a triangle of Galois correspondences between the set of homogeneous \textbf{radical} ideals which are not equal to the irrelevant ideal, the set of \textbf{closed} sets of $ℙ^n_K$, and the set of nontrivial \textbf{closed} affine cones in $𝔸^{n+1}_K$.
-    \item Show that the above triangle of Galois correspondences descends to a triangle of Galois correspondences between the set of homogeneous \textbf{prime} ideals which are not equal to the irrelevant ideal, the set of \textbf{irreducible closed} sets of $ℙ^n_K$, and the set of nontrivial \textbf{irreducible closed} affine cones in $𝔸^{n+1}_K$.
-    \item Was it really necessary to assume that $K$ is infinite?
-      Find out which statements still hold if we drop this assumption.
+    \item Show that $(U_i)_{i ∈ \{0,\dots,n\}}$ is a decomposition of $ℙ^n_K$ satisfying the conditions of (a), thus defining the \emph{Zariski topology} on $ℙ^n_K$.
   \end{enumerate}
 \end{exercise}
 
@@ -482,7 +441,66 @@
   \end{align*}
   called \emph{dehomogenization with respect to $X_i$}.
     Show that each $Φ^{(d)}_i$ is $K$-linear and has a $K$-linear inverse $Ψ_i^{(d)}$ called \emph{homogenization with respect to $X_i$}.
-      By identifying $K[X_0,\dots,X_n]$ with a subset of $K[X_0,\dots,X_n][X_i^{-1}]$ this inverse can be written as $Ψ^{(d)}_i(f)=X_i^d ⋅ f(\tfrac{X_0}{X_i},\dots,\tfrac{X_n}{X_i})$.
+      By identifying $K[X_0,\dots,X_n]$ with a subset of $K[X_0,\dots,X_n][X_i^{-1}]$ this inverse can be written as $Ψ^{(d)}_i(f)=X_i^d ⋅ f(\tfrac{X_0}{X_i},\dots,\widehat{\tfrac{X_i}{X_i}},\dots,\tfrac{X_n}{X_i})$.
+\end{exercise}
+
+\begin{exercise}[The fundamental Galois correspondences of classical projective geometry]
+  Let $K$ be a field.
+  A subset $C⊆𝔸^{n+1}_K$ is called an \emph{affine cone} in $𝔸^{n+1}_K$ if $λ⋅p ∈ C$ for each $λ ∈ K$ whenever $p ∈ C$.
+  \begin{enumerate}
+    \item Consider the map $π:𝔸^{n+1}_K∖\{0\} → ℙ^n_K$ which sends a point $p \neq 0$ to the line through $0$ and $p$.
+      Show that it induces a Galois connection
+      % https://q.uiver.app/?q=WzAsMixbMCwwLCIo8J2SqyjihJlebl9LKSziioYpIl0sWzIsMCwiKFxce1xcdGV4dHthZmZpbmUgY29uZXMgaW4gffCdlLhee24rMX1fS1xcfSziioYpIl0sWzAsMSwi8J2SniIsMix7Im9mZnNldCI6Mn1dLFsxLDAsIs+AX3tcXHRpbGRleyF9fSIsMix7Im9mZnNldCI6Mn1dLFszLDIsIiIsMix7ImxldmVsIjoxLCJzdHlsZSI6eyJuYW1lIjoiYWRqdW5jdGlvbiJ9fV1d
+      \[\begin{tikzcd}
+        {(\{\text{subsets of }ℙ^n_K,⊆)} && {(\{\text{affine cones in }𝔸^{n+1}_K\},⊆)}
+        \arrow[""{name=0, anchor=center, inner sep=0}, "{𝒞}"', shift right=2, from=1-1, to=1-3]
+        \arrow[""{name=1, anchor=center, inner sep=0}, "{π_{\tilde{!}}}"', shift right=2, from=1-3, to=1-1]
+        \arrow["\dashv"{anchor=center, rotate=-90}, draw=none, from=1, to=0]
+      \end{tikzcd}\]
+      where $𝒞(M)\coloneqq π^{-1}(M)∪\{0\}$ and $π_{\tilde{!}}(C) \coloneqq π(C∖\{0\})$.
+  \end{enumerate}
+  Now, suppose $K$ is an infinite field.
+  \begin{enumerate}[start=2]
+    \item Show that the Galois connection $ℐ ⊣ 𝒱$ between ideals of $K[X_0,\dots,X_n]$ and subsets of $𝔸^{n+1}_K$ descends to a Galois connection
+      % https://q.uiver.app/?q=WzAsMixbMCwwLCIoXFx7XFx0ZXh0e2hvbW9nZW5lb3VzIGlkZWFscyBvZiB9S1tYXzAsXFxkb3RzLFhfbl1cXH0s4oqHKSJdLFsyLDAsIihcXHtcXHRleHR7YWZmaW5lIGNvbmVzIGluIH3wnZS4XntuKzF9X0tcXH0s4oqGKSJdLFswLDEsIvCdkrEiLDIseyJvZmZzZXQiOjJ9XSxbMSwwLCLihJAiLDIseyJvZmZzZXQiOjJ9XSxbMywyLCIiLDIseyJsZXZlbCI6MSwic3R5bGUiOnsibmFtZSI6ImFkanVuY3Rpb24ifX1dXQ==
+      \[\begin{tikzcd}
+        {(\{\text{homogeneous ideals of }K[X_0,\dots,X_n]\},⊇)} && {(\{\text{affine cones in }𝔸^{n+1}_K\},⊆)}
+        \arrow[""{name=0, anchor=center, inner sep=0}, "{𝒱}"', shift right=2, from=1-1, to=1-3]
+        \arrow[""{name=1, anchor=center, inner sep=0}, "{ℐ}"', shift right=2, from=1-3, to=1-1]
+        \arrow["\dashv"{anchor=center, rotate=-90}, draw=none, from=1, to=0]
+      \end{tikzcd}\]
+    \item Show the existence of a Galois connection
+      % https://q.uiver.app/?q=WzAsMixbMCwwLCIoXFx7XFx0ZXh0e2hvbW9nZW5lb3VzIGlkZWFscyBvZiB9S1tYXzAsXFxkb3RzLFhfbl1cXH0s4oqHKSJdLFsyLDAsIihcXHtcXHRleHR7c3Vic2V0cyBvZiB94oSZXntufV9LXFx9LOKKhikiXSxbMSwwLCLihJBfKyIsMix7Im9mZnNldCI6Mn1dLFswLDEsIvCdkrFfKyIsMix7Im9mZnNldCI6Mn1dLFsyLDMsIiIsMCx7ImxldmVsIjoxLCJzdHlsZSI6eyJuYW1lIjoiYWRqdW5jdGlvbiJ9fV1d
+      \[\begin{tikzcd}
+        {(\{\text{homogeneous ideals of }K[X_0,\dots,X_n]\},⊇)} && {(\{\text{subsets of }ℙ^{n}_K\},⊆)}
+        \arrow[""{name=0, anchor=center, inner sep=0}, "{ℐ_+}"', shift right=2, from=1-3, to=1-1]
+        \arrow[""{name=1, anchor=center, inner sep=0}, "{𝒱_+}"', shift right=2, from=1-1, to=1-3]
+        \arrow["\dashv"{anchor=center, rotate=-90}, draw=none, from=0, to=1]
+      \end{tikzcd}\]
+      where $𝒱_+(𝖆)=\{ℓ ∈ ℙ^n_K \mid ∀f ∈ 𝖆 : f(ℓ) = 0\}$ and $ℐ_+(M)=\{f \mid ∀ ℓ ∈ M:f(ℓ) = 0\}$.
+    \item Show that $𝒞∘𝒱_+ = 𝒱$ and $ℐ_+ ∘ π_{\tilde{!}} = ℐ$.
+  \end{enumerate}
+  Finally, suppose $K$ is an algebraically closed field.
+  \begin{enumerate}[start=5]
+    \item Show that the above Galois connections descend to Galois correspondences between the set of homogeneous \textbf{radical} ideals of $K[X_0,\dots,X_n]$ which are not equal to the irrelevant ideal, the set of \textbf{closed} sets of $ℙ^n_K$, and the set of nonzero \textbf{closed} affine cones in $𝔸^{n+1}_K$.
+    \item Show that these Galois correspondences further descend to Galois correspondences between the set of homogeneous \textbf{prime} ideals $K[X_0,\dots,X_n]$ which are not equal to the irrelevant ideal, the set of \textbf{irreducible closed} sets of $ℙ^n_K$, and the set of nonzero \textbf{irreducible closed} affine cones in $𝔸^{n+1}_K$.
+  \end{enumerate}
+\end{exercise}
+
+\begin{exercise}[Projective space as a quotient]
+  \begin{enumerate}
+    \item Prove that the map $π:𝔸^{n+1}_K∖\{0\} → ℙ^n_K$ sending a point to the line through $p$ and the origin is continuous.
+    \item Consider the action of $K^×$ on $𝔸^{n+1}_K$ by scaling, that is, $λ∈K^×$ sends $(a_0,\dots,a_n)$ to $(λa_0,\dots,λa_n)$.
+      Denote the corresponding quotient projection $𝔸^{n+1}_K∖\{0\} → (𝔸^{n+1}_K∖\{0\})/K^×$ by $ν$ and equip $(𝔸^{n+1}_K∖\{0\})$ with the quotient topology.
+      Find a homeomorphism rendering the following triangle commutative:
+      \[\begin{tikzcd}[column sep=5em]
+        & {𝔸^{n+1}_K∖\{0\}} \\
+        {ℙ^n_K} && {(𝔸^{n+1}_K∖\{0\})/K^×}
+        \arrow["{≃}", dashed, from=2-1, to=2-3]
+        \arrow["ν", from=1-2, to=2-3]
+        \arrow["{π}"', from=1-2, to=2-1]
+      \end{tikzcd}\]
+  \end{enumerate}
 \end{exercise}
 
 %\begin{exercise}[The variety of nilpotent matrices]
