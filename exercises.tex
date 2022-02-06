@@ -576,4 +576,16 @@
 %  \end{enumerate}
 %\end{exercise}
 
+\begin{exercise}[Subgrassmannians]
+  Recall that the \emph{$k$-th Grassmannian} $G(k,V)$ of a vector space $V$ over a field $K$ is the set of $k$-dimensional linear subspaces of $V$.
+  We can regard it as a projective variety via the \emph{Plücker embedding} $ι:G(k,V) → ℙ(⋀^kV)$, sending a subspace spanned by $w_1,\dots,w_k$ to $[w_1∧\dots∧w_k$].
+  \begin{enumerate}
+    \item Let $H$ be a \emph{subquotient} of $V$, that is, a quotient of a linear subspace of $V$.
+    Show the existence of an $r≥0$ such that for each $k≥0$ there is an injection $G(k,H) ↪ G(k+r,V)$.
+      The image of such a map is called a \emph{subgrassmannian} or \emph{Grassmannian subvariety}.
+    \item Show that the image of a subgrassmannian $G(k-r,H) ↪ G(k,V)$ under the Plücker embedding $ι:G(k,V) ↪ ℙ(⋀^k V)$ is a \emph{linear section} of $ι(G(k,V))$, that is, there is a linear subspace $Λ⊆ℙ(⋀^kV)$ such that $ι(G(k-r,H)) = ι(G(k,V)) ∩ Λ$.
+      In particular, Grassmannian subvarieties are indeed projective varieties.
+  \end{enumerate}
+\end{exercise}
+
 \end{document}
