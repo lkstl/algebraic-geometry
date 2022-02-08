@@ -582,15 +582,29 @@
 \end{exercise}
 
 \begin{exercise}[Subgrassmannians]
-  Recall that the \emph{$k$-th Grassmannian} $G(k,V)$ of a vector space $V$ over a field $K$ is the set of $k$-dimensional linear subspaces of $V$.
-  We can regard it as a projective variety via the \emph{Plücker embedding} $ι:G(k,V) → ℙ(⋀^kV)$, sending a subspace spanned by $w_1,\dots,w_k$ to $[w_1∧\dots∧w_k$].
+  Let $V$ be a vector space over a field $K$.
+  Recall that the \emph{$k$-th Grassmannian} $G(k,V)$ of $V$ is the set of $k$-dimensional linear subspaces of $V$.
   \begin{enumerate}
+    \item Let $U⊆V$ be a linear subspace.
+      Find an inclusion $G(k,U)↪G(k,V)$ and describe its image.
+    \item Let $W⊆V$ be a linear subspace of dimension $r≥0$.
+      Find an inclusion $G(k-r,V/W) ↪ G(k,V)$ and describe its image.
     \item Let $H$ be a \emph{subquotient} of $V$, that is, a quotient of a linear subspace of $V$.
-    Show the existence of an $r≥0$ such that for each $k≥0$ there is an injection $G(k,H) ↪ G(k+r,V)$ and describe its image.
-    Subsets arising as images of such injections are called \emph{subgrassmannians}.
-    \item Show that the image of a subgrassmannian $G(k-r,H) ↪ G(k,V)$ under the Plücker embedding $ι:G(k,V) ↪ ℙ(⋀^k V)$ is a \emph{linear section} of $ι(G(k,V))$, that is, there is a linear subspace $Λ⊆ℙ(⋀^kV)$ such that $ι(G(k-r,H)) = ι(G(k,V)) ∩ Λ$.
-      In particular, subgrassmannians are projective varieties.
+      Find an $r≥0$ together with an inclusion $G(k-r,H) ↪ G(k,V)$ and describe its image.
   \end{enumerate}
+  Subsets of $G(k,V)$ of this form are called \emph{subgrassmannians}.
+
+  Now, recall that we can regard $G(k,V)$ as a projective variety via the \emph{Plücker embedding} $ι:G(k,V) → ℙ(⋀^kV)$, sending a subspace spanned by $w_1,\dots,w_k$ to $[w_1∧\dots∧w_k$].
+  \begin{enumerate}[start=4]
+    \item Given linear subspaces $Γ,Λ⊆V$ with $\dim(Λ)=l$ and $s≥0$, prove that $\dim(Γ∩Λ)≥s$ if and only if for all $v_1,\dots,v_{l-s+1}∈Λ$ we have $ι(Γ)∧v_1∧\dots v_{l-s+1}=0$.
+  \end{enumerate}
+  Using this, conclude that the following subsets of $G(k,V)$ are closed subvarietes:
+  \begin{enumerate}[start=5]
+    \item The set $Σ_s(Λ)$ of those $k$-planes which meet a given linear subspace $Λ⊆V$ in a subspace of dimension at least $s≥0$.
+    \item The set $Σ(Λ)$ of those $k$-planes which meet a given linear subspace $Λ⊆V$.
+    \item A subgrassmannian $G(k-r,H)↪G(k,V)$.
+  \end{enumerate}
+  Which of these subsets $Z⊆G(k,V)$ are \emph{linear sections} under the Plücker embedding, that is, for which of these is there a linear subspace $Θ⊆P(⋀^kV)$ such that $ι(Z)=ι(G(k,V))∩Θ$?
 \end{exercise}
 
 \end{document}
